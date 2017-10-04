@@ -1,0 +1,15 @@
+test sys.stdout
+aagarw41 2017-09-25-21-36-36 
+==================
+Question q1: 3/3
+Question q2: 3/3
+Question q3: 3/3
+Question q4: 3/3
+Question q5: 3/3
+Question q6: 3/3
+Question q7: 4/4
+Question q8: 3/3
+------------------
+Total: 25/25
+10.218020916
+aasharm2 2017-09-24-21-24-31

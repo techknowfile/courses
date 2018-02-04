@@ -1,3 +1,5 @@
+import warnings
+warnings.filterwarnings('ignore', category=RuntimeWarning)
 import os
 import math
 from collections import defaultdict
@@ -12,7 +14,8 @@ def sigmoid(z):
     return 1/(1 + np.exp(-z))
 
 
-class logisticRegression:
+class LogisticRegression:
+    """LogisticRegression"""
     def __init__(self, step_size=0.01):
         self.weights = None
         self.step_size = step_size
@@ -41,15 +44,18 @@ class logisticRegression:
         return p, accuracy
 
 class NaiveBayesClassifier:
-    def __init__(self, index=4):
-        self.class_attr_index = index
-
+    """NaiveBayesClassifier"""
     def train(self, X, y):
-        X = X.groupby(X[y == 1]).agg(['mean', 'std'])
+        """train
+
+        :param X:
+        :param y:
+        """
+        X = X.groupby(y == 1).agg(['mean', 'std'])
         self.nb_param_dict = defaultdict(lambda: defaultdict(lambda: defaultdict(float)))
 
         # Learn priors
-        class_counts = df[self.class_attr_index].value_counts()
+        class_counts = y.value_counts()
         total = class_counts.sum()
         self.nb_param_dict["classes"] = class_counts.index.tolist()
         class_counts = class_counts.to_dict()
@@ -58,46 +64,44 @@ class NaiveBayesClassifier:
 
         # Learn class conditionals
         for attr, stat in X:
-            if attr is not self.class_attr_index:
-                for i in range(len(X[(attr, stat)])):
-                    # For each class value, save the attribute class conditional parameters into dict
-                    self.nb_param_dict[attr][stat].update({i: X[(attr, stat)].iloc[i]})
-        print(self.nb_param_dict)
-        print("TESTING", df[df[4] == 1][0].mean())
-        print(self.nb_param_dict[0]["mean"][1])
+            for i in range(len(X[(attr, stat)])):
+                # For each class value, save the attribute class conditional parameters into dict
+                self.nb_param_dict[attr][stat].update({i: X[(attr, stat)].iloc[i]})
+        # print(self.nb_param_dict)
+        # print("TESTING", df[df[4] == 1][0].mean())
+        # print(self.nb_param_dict[0]["mean"][1])
 
     def test(self, X, y):
+        """test
+
+        :param X:
+        :param y:
+        """
         classifications = []
         for index, row in X.iterrows():
             probabilities = []
             for c in self.nb_param_dict["classes"]:
                 prior = self.nb_param_dict[("prior", c)]
-                print("class:", c, "prior:", prior)
                 probability = prior
                 for attr in row.index:
                     x = row[attr]
                     probability*=self.normal_likelihood(x, attr, c)
                 probabilities.append(probability)
-            # print(probabilities)
-            print("probabilities:", probabilities)
             classification_index, classification_prob = max(enumerate(probabilities), key=lambda p: p[1])
-            # print("predication:", self.nb_param_dict["classes"][classification_index], "true label:", y[index])
             classifications.append(self.nb_param_dict["classes"][classification_index])
         classifications = np.array(classifications)
-        print(y)
         stats = dict(zip(*np.unique(np.equal(classifications, y), return_counts=True)))
         accuracy = stats[True]/len(X)
-        print(accuracy)
+        return classifications, accuracy
    
     def normal_likelihood(self, x, attr, c):
         mean = self.nb_param_dict[attr]["mean"][c]
         variance = self.nb_param_dict[attr]["std"][c]
         likelihood = math.e**(-(x-mean)**2/(2*variance))/math.sqrt(2*math.pi*variance)
-        print(x, attr, c, likelihood)
         return likelihood
 
 
-def cross_validation(X, y, n_folds):
+def cross_validation(estimator, X, y, n_folds):
     """cross_validation
 
     :param estimator: function to fit the data
@@ -115,29 +119,33 @@ def cross_validation(X, y, n_folds):
         y_train = pd.concat(y_splits[:i] + y_splits[i+1:])
         y_val = y_splits[i]
 
-        lr_classifier = logisticRegression()
-        lr_classifier.train(X_train, y_train)
-        results, accuracy = lr_classifier.test(X_val, y_val)
+        classifier = estimator()
+        classifier.train(X_train, y_train)
+        results, accuracy = classifier.test(X_val, y_val)
 
         scores += [accuracy]
 
     return scores
 
+
 def main():
+    """main"""
     df = pd.read_csv(bank_data_csv, header=None)
 
     X = df.iloc[:, :4]
     y = df.iloc[:, 4]
 
     # Train and test logistic regression model
-    # scores = cross_validation(X, y, folds)
-    # print(scores)
-    # print(sum(scores)/len(scores))
+    scores = cross_validation(LogisticRegression, X, y, folds)
+    print(scores)
+    print(sum(scores)/len(scores))
 
     # Train and test Naive Bayes classification model
     nb = NaiveBayesClassifier()
-    nb.train(X, y)
-    nb.test(X, y)
+    scores = cross_validation(NaiveBayesClassifier, X, y, folds)
+    print(scores)
+    print(sum(scores)/len(scores))
+
 
 if __name__ == '__main__':
     main()

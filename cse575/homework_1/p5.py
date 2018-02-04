@@ -4,7 +4,7 @@ from collections import defaultdict
 import numpy as np
 import pandas as pd
 
-epochs = 5000
+epochs = 1000
 folds = 5
 bank_data_csv = './data_banknote_authentication.txt'
 
@@ -18,32 +18,34 @@ class logisticRegression:
         self.step_size = step_size
 
     def train(self, X, y):
+        X['bias_input'] = 1
         self.weights = np.zeros(X.shape[1])
         X = X.as_matrix()
         y = y.as_matrix()
         for i in range(epochs):
-            sig_minus_y = np.diag((sigmoid(X @ self.weights) - y.T)[0])
+            sig_minus_y = np.diag((sigmoid(X @ self.weights) - y))
             grad_of_J = np.mean(np.matmul(sig_minus_y, X), axis=0)
             self.weights-= self.step_size*grad_of_J
 
     def test(self, X, y):
         # TODO: check that model is trained
+        X['bias_input'] = 1
         X = X.as_matrix()
         y = y.as_matrix()
         # p is the predicted values (classifications)
         p = sigmoid(X @ self.weights)
         p[p > 0.5] = 1
         p[p <= 0.5] = 0
-        stats = dict(zip(*np.unique(np.equal(p, y.T[0]), return_counts=True)))
+        stats = dict(zip(*np.unique(np.equal(p, y), return_counts=True)))
         accuracy = stats[True]/len(X)
         return p, accuracy
 
 class NaiveBayesClassifier:
-    def __init__(self, index):
+    def __init__(self, index=4):
         self.class_attr_index = index
 
-    def train(self, df):
-        X = df.groupby(df.iloc[:, self.class_attr_index]).agg(['mean', 'std'])
+    def train(self, X, y):
+        X = X.groupby(X[y == 1]).agg(['mean', 'std'])
         self.nb_param_dict = defaultdict(lambda: defaultdict(lambda: defaultdict(float)))
 
         # Learn priors
@@ -64,9 +66,7 @@ class NaiveBayesClassifier:
         print("TESTING", df[df[4] == 1][0].mean())
         print(self.nb_param_dict[0]["mean"][1])
 
-    def test(self, df):
-        X = df.iloc[:, :self.class_attr_index]
-        y = df.iloc[:, self.class_attr_index]
+    def test(self, X, y):
         classifications = []
         for index, row in X.iterrows():
             probabilities = []
@@ -125,19 +125,19 @@ def cross_validation(X, y, n_folds):
 
 def main():
     df = pd.read_csv(bank_data_csv, header=None)
+
     X = df.iloc[:, :4]
-    X['bias_input'] = 1
     y = df.iloc[:, 4]
-    print(y)
 
-
+    # Train and test logistic regression model
     # scores = cross_validation(X, y, folds)
     # print(scores)
     # print(sum(scores)/len(scores))
 
-    nb = NaiveBayesClassifier(4)
-    nb.train(df)
-    nb.test(df)
+    # Train and test Naive Bayes classification model
+    nb = NaiveBayesClassifier()
+    nb.train(X, y)
+    nb.test(X, y)
 
 if __name__ == '__main__':
     main()

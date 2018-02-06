@@ -31,7 +31,7 @@ Suppose that in your coin flip experiment, you observed a set of $\alpha_H$ head
 	What is the mean of $P(\theta|D)$?
 
 	For notational convenience, let $a=\beta_H+\alpha_H$ and $b=\beta_T+\alpha_T$. As they say, statistics is the practice of replacing expectations with averages, so the mean of $P(\theta|D)$ is the same as $\mathbb{E}\left[ P(\theta|D)\right].$ And, of course, because this value is a probability, we can bound the integral by $[0, 1].$
-	\begin{align}
+	\begin{align*}
 		\mathbb{E}\left[ P(\theta|D)\right] &= \int_{0}^1{\theta P(\theta|D)d\theta} \\
 											&= \frac{1}{B(a, v)}\int_0^1{\theta^a{(1-\theta)}^{b-1}d\theta}\\
 	\intertext{Here, we can see that the integral is, itself, a beta function.}
@@ -39,7 +39,7 @@ Suppose that in your coin flip experiment, you observed a set of $\alpha_H$ head
 	&= \frac{\Gamma(a+1)\Gamma(b)\Gamma(a+b)}{\Gamma(a)\Gamma(b)\Gamma(a+b+1)}\\
 	&= \frac{a}{a+b}\\
 	&= \frac{\beta_H+\alpha_H}{\beta_H+\alpha_H+\beta_T+\alpha_T}
-	\end{align}
+	\end{align*}
 
 	\questionpart
 	What is the MAP estimator $\hat{\theta}_{MAP}\text{ of }\theta?$
@@ -87,7 +87,53 @@ Suppose that in your coin flip experiment, you observed a set of $\alpha_H$ head
 	\questionpart If the true value of $\mu$ is unknown, then the MLE estimate of $\sigma^2$ is
 	$$\sigma^2_{MLE}=\frac{1}{n}\sum_{i=1}^{n}{(x_i-\hat{\mu}_{MLE})}^2$$
 	Prove that $\sigma^2_{MLE}$ is biased.
-	TODO
+
+	Before we begin, there are a few derivations that we'll want to have on hand when completing this proof. To start, we'll derive the definition of variance $\sigma^2$.
+	
+	\begin{align*}
+		\sigma^2&=\mathbb{E}\left[ {(X-\mu)}^2\right]\\
+		&= \mathbb{E}[X^2-2X\mu+\mu^2]\\
+		&= \mathbb{E}[X^2]-2\mu\mathbb{E}[X]+\mu^2\\
+		&= \mathbb{E}[X^2]-\mu^2\\
+		&= \mathbb{E}[X^2]-{(\mathbb{E}[X])}^2
+	\end{align*}
+	A little bit of algebraic manipulation of these equations gives us 
+	\begin{equation}
+		\mathbb{E}{[X^2]}=\sigma^2+\mu^2,
+	\end{equation}
+	Also note that $\sigma^2$ is a function of X. If we pass into it $\hat{\mu}$, we get
+	\begin{align}
+		\sigma_{\hat{\mu}}^2&=\mathbb{E}[\hat{\mu}^2]-{(\mathbb{E}[\hat{\mu}])}^2 \nonumber\\
+		&=\mathbb{E}[\hat{\mu}^2]-{\mu}^2  
+	\end{align}
+	We can also derive the variance of $\hat{\mu}$ as follows
+	\begin{align}
+		\sigma_{\hat{\mu}}^2 &= Var(\frac{x_1+\cdots+x_n}{n}) \nonumber\\
+		&=\frac{1}{n^2}Var(x_1+\cdots+x_n)\nonumber\\
+		&=\frac{1}{n^2}[Var(x_1)+\cdots+Var(x_n)]\nonumber\\
+		&=\frac{\sigma^2}{n}
+	\end{align}
+	Using (2) and (3), we arrive at the equation
+	\begin{equation}
+		\mathbb{E}\left[ \hat{\mu}^2\right]=\frac{\sigma^2}{n}+\mu^2
+	\end{equation}
+	With these derivations in our toolbox, we can now begin the proof that $\sigma^2_{MLE}$ is biased. Again, we'll do so by comparing the expectation of this value to the population variance.
+	\begin{align}
+		\mathbb{E}\left[ \sigma^2_{MLE}\right] &= \mathbb{E}\left[ \frac{1}{n}\sum{(x_i-\hat{\mu})}^2\right] \nonumber\\
+		&= \frac{1}{n}\mathbb{E}\left[ \sum\left( x_i^2-2x_i\hat{\mu}+\hat{\mu}^2\right)\right]\nonumber\\
+		&= \frac{1}{n}\mathbb{E}\left[ \sum x_i^2 -2\hat{\mu}\sum x_i+n\hat{\mu}^2\right]\nonumber\\
+		&= \frac{1}{n}\mathbb{E}\left[ \sum x_i^2 -2n\hat{\mu}^2+n\hat{\mu}^2\right]\nonumber\\
+		&= \frac{1}{n}\left( \sum{\mathbb{E}\left[x_i^2\right]}-n\mathbb{E}\left[\hat{\mu}^2\right]\right)\nonumber\\
+		&= \frac{1}{n}\left( n{\mathbb{E}\left[X^2\right]}-n\mathbb{E}\left[\hat{\mu}^2\right]\right)\nonumber\\
+		&= \mathbb{E}\left[X^2\right]-\mathbb{E}\left[\hat{\mu}^2\right]
+	\end{align}
+	Do the expectations in (5) look familiar? They should! Indeed, they are the two expectations that we derived earlier. By plugging the expressions from (1) and (4) into (5), we get
+	\begin{align*}
+		\mathbb{E}\left[ \sigma_{MLE}^2\right] &= \sigma + \mu^2 - \frac{\sigma^2}{n}-\mu^2\\
+		&= \sigma^2 - \frac{\sigma^2}{n}\\
+		&= \left(\frac{n-1}{n}\right)\sigma^2
+	\end{align*}
+	$\left(\frac{n-1}{n}\right)\sigma^2 \neq \sigma^2$, therefore $\sigma_{MLE}^2$ is biased.
 \end{alphaparts}
 \question
 \begin{alphaparts}
@@ -140,7 +186,7 @@ For notational and implementation convenience, first append a 1 to each sample v
 	0 & 1 & 1\\
 	-1 & 0 & 1
 \end{bmatrix}}
-$$\left{X=\pfourmatrix}\right\}\text{\scriptsize m},\quad\mathbf{\theta}=
+$$\left.X=\pfourmatrix\right\}\text{\scriptsize m},\quad\mathbf{\theta}=
 \begin{bmatrix}
 	0\\
 	0\\
@@ -182,6 +228,27 @@ $$\frac{\delta J}{\delta\hat{p}}\frac{\delta\hat{p}}{\delta z}=\frac{1}{m}\sum_{
 $$\frac{\delta z}{\delta\theta_j}=x_j$$
 $$\frac{\delta J}{\delta \hat{p}}\frac{\delta \hat{p}}{\delta z}\frac{\delta z}{\theta_j}=\frac{1}{m}\sum_{i=1}^m(\hat{p}^{(i)}-y^{(i)})x_j^{(i)}$$  
 From this result, it is clear that the only calculation we need to complete prior to updating our weights is the sigmoid function.
-It's also worth noting that this result can be 
-\end{document}
+It's also worth noting that this result can be written in matrix form, which allows for efficient computation when implementing
+$$\frac{\delta J}{\delta \hat{p}}\frac{\delta \hat{p}}{\delta z}\frac{\delta z}{\theta}=mean((sig(X\mathbf{\theta})-\mathbf{y})\odot X)$$
+Now that we know the process of logistic regression, what can we say about the parameters? What do they represent?
 
+Unfortunately, interpreting the parameters learned isn't nearly as straight forward as it is in linear regression models, even though what we're ultimately fitting is a discriminant line in the feature space. However, if we consider the threshold value 0.5 and its relation of the the input to the sigmoid function z, we know that when $z > 0,\,sig(z) > 0.5$. Likewise, when $z\leq 0, \, sig(z) \leq 0.5$. From this, it is obvious that the parameters we are learning are for a line in the feature space at form at $z=0$. Scaling the coefficients of z by any scalar value would result in the same line, so the there are infinite values that $\theta$ could converge to, and this will depend on the the values that the vector is initiated with.
+
+In this example, the values will ultimately converge to $\theta_1=-\theta_2$ (s.t. $\theta_1\in\mathcal{R}$), and $b=0$
+$$\theta_1x_1+\theta_2x_2+b=0$$
+
+\question{Naive Bayes Classifier and Logistic Regression}
+\begin{alphaparts}
+	\questionpart
+	How many independent parameters are there in this Gaussian Naive Bayes classifier? What are they?
+
+	Unlike Question 3, the class-conditionals in this problem aren't discrete, they're probability distribution functions. There are infinite possible values of $x_i$, and therefore no notion have having ``$m_i-1$'' independent variables per attribute. Instead, each attribute has a corresponding $\mu$ and $\sigma^2$ parameter for each of the two possible class labels. However, because the target attribute is still discrete (boolean), one of the priors constitutes an independent parameter and the other does not.
+
+	Thus, there are $9$ independent parameters in this problem.
+
+
+
+
+\end{alphaparts}
+
+\end{document}

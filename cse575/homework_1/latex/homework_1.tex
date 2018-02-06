@@ -8,6 +8,8 @@
 \newcommand{\hwlecture}{}
 \newcommand{\hwsection}{}
 
+\usepackage{algorithm}
+\usepackage{algpseudocode}
 % This is just used to generate filler content. You don't need it in an actual
 % homework!
 \usepackage{lipsum}
@@ -212,7 +214,7 @@ $$\mathbf{z}=X\mathbf{\theta}=
 	0.5\\
 	0.5
 \end{bmatrix}$$
-$\mathbf{\hat{p}}$ represents the model's estimated probabilities of a positive class in vectorized form. When performing prediction, a threshold value of 0.5 is set such that the predicted class is 1 when $p>0.5$ and 0 when $p\leq 0.5$. This threshold effectively draws a discriminant line in the input space. When training, however, The cross-entropy loss is used as a cost function on the estimated probability. When training with batches of data, the total loss is simply the average cost over the training data. This allows us to write the cost function as
+$textbfthbf{\hat{p}}$ represents the model's estimated probabilities of a positive class in vectorized form. When performing prediction, a threshold value of 0.5 is set such that the predicted class is 1 when $p>0.5$ and 0 when $p\leq 0.5$. This threshold effectively draws a discriminant line in the input space. When training, however, The cross-entropy loss is used as a cost function on the estimated probability. When training with batches of data, the total loss is simply the average cost over the training data. This allows us to write the cost function as
 $$J(\mathbf{\theta})=-\frac{1}{m}\sum_{i=1}^my^{(i)}log(\hat{p}^{(i)})+(1-y^{(i)})log(1-\hat{p}^{(i)})$$
 To minimize the loss, we can calculate the gradient of $J(\mathbf{\theta})$ with respect to $\mathbf{\theta}$ and then update $\mathbf{\theta}$ in the negative direction of that gradient. Iterating over this process ad infinitum will converge to the optimal parameters (ignoring issues of perfect separation, etc).
 $$\frac{\delta J(\mathbf{\theta})}{\delta \theta_j}=\frac{\delta J}{\delta \hat{p}}\frac{\delta \hat{p}}{\delta z}\frac{\delta z}{\theta_j}$$
@@ -234,21 +236,62 @@ Now that we know the process of logistic regression, what can we say about the p
 
 Unfortunately, interpreting the parameters learned isn't nearly as straight forward as it is in linear regression models, even though what we're ultimately fitting is a discriminant line in the feature space. However, if we consider the threshold value 0.5 and its relation of the the input to the sigmoid function z, we know that when $z > 0,\,sig(z) > 0.5$. Likewise, when $z\leq 0, \, sig(z) \leq 0.5$. From this, it is obvious that the parameters we are learning are for a line in the feature space at form at $z=0$. Scaling the coefficients of z by any scalar value would result in the same line, so the there are infinite values that $\theta$ could converge to, and this will depend on the the values that the vector is initiated with.
 
+
 In this example, the values will ultimately converge to $\theta_1=-\theta_2$ (s.t. $\theta_1\in\mathcal{R}$), and $b=0$
 $$\theta_1x_1+\theta_2x_2+b=0$$
 
 \question{Naive Bayes Classifier and Logistic Regression}
 \begin{alphaparts}
 	\questionpart
-	How many independent parameters are there in this Gaussian Naive Bayes classifier? What are they?
+	- How many independent parameters are there in this Gaussian Naive Bayes classifier? What are they?
 
 	Unlike Question 3, the class-conditionals in this problem aren't discrete, they're probability distribution functions. There are infinite possible values of $x_i$, and therefore no notion have having ``$m_i-1$'' independent variables per attribute. Instead, each attribute has a corresponding $\mu$ and $\sigma^2$ parameter for each of the two possible class labels. However, because the target attribute is still discrete (boolean), one of the priors constitutes an independent parameter and the other does not.
 
 	Thus, there are $9$ independent parameters in this problem.
 
+	- Can we translate $w$ in to the parameters of an equivalent Gaussian Naive Bayes classifier without any extra assumption?\\
+	{\footnotesize\bf
+		Note:  Tom Mitchell's Machine Learning book was referenced for this problem.
+		{\itshape 
+			Machine Learning, Tom Mitchell, McGraw Hill, 1997.
+		}
+	}
 
 
+	To determine a relationship between Gaussian Naive Bayes and logistic regression, it would help to first have them in a similar form. 
 
+	TODO
+	\questionpart
+\textbf{Implementation of Naive Bayes and Logistic Regression.} Compare the two approaches on the bank note authentication dataset. Implement a Gaussian Naive Bayes classifier and a logistic regression classifier. Please write you code from scratch. For the NB classifier, assume the $P(x_i|y)\sim\mathcal{N}(\mu_{i, k}, \sigma_{i, k})$ where $x_i$ is a feature in the bank note data and $y$ is the class label. Use three-fold cross-validation to splite the data and train/test your models.
+\begin{arabicparts}
+	\questionpart
+	For each algorithm: briefly describe how you implement it by giving the pseudocode. The pseudocode must include equations for estimating the model parameters and for classifying a new sample.
+	
+	\begin{algorithm}
+		\caption{Logistic regression}
+		\begin{algorithmic}
+			\Procedure{train}{$X, y, \theta$}\Comment Train the model
+				\For{$i \gets 1, 1000$}
+				\State $\mathbf{z}\gets X\mathbf{\theta}$
+				\State $\mathbf{p} \gets sigmoid(\mathbf{z})$
+				\State $\Delta\mathbf{\theta}=mean(diag(\mathbf{p}-\mathbf{y})X)$
+				\State $\mathbf{\theta}=\mathbf{\theta} - \Delta\mathbf{\theta}$
+				\EndFor
+				\State \textbf{return $\theta$}
+			\EndProcedure
+			\item[]
+			\Procedure{test}{$x, y, \theta$}
+				\State $z\gets x\cdot\mathbf{\theta}$
+				\State $p \gets sigmoid(z)$
+				\If{$p > 0.5$}
+				\State \mathbf{return 1}
+				\Else
+				\State \mathbf{return 0}
+			\EndProcedure
+		\end{algorithmic}
+	\end{algorithm}
+
+\end{arabicparts}
 \end{alphaparts}
 
 \end{document}

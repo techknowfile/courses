@@ -10,7 +10,7 @@ from IPython.display import display
 from IPython.core.pylabtools import figsize, getfigs
 
 epochs = 1000
-folds = 3
+folds = 5
 bank_data_csv = './data_banknote_authentication.txt'
 
 def sigmoid(z):
@@ -30,8 +30,8 @@ class LogisticRegression:
         X = X.as_matrix()
         y = y.as_matrix()
         for i in range(epochs):
-            sig_minus_y = np.diag((sigmoid(X @ self.weights) - y))
-            grad_of_J = np.mean(np.matmul(sig_minus_y, X), axis=0)
+            sig_minus_y = (sigmoid(X @ self.weights) - y)
+            grad_of_J = np.matmul(X.T, sig_minus_y)/len(X.T)
             self.weights-= self.step_size*grad_of_J
 
     def test(self, X, y):
@@ -106,7 +106,6 @@ class NaiveBayesClassifier:
         stats = dict(zip(*np.unique(np.equal(classifications, y), return_counts=True)))
         accuracy = stats[True]/len(y)
         return classifications, accuracy
-   
     def normal_likelihood(self, x, attr, c):
         mean = self.nb_param_dict[attr]["mean"][c]
         variance = self.nb_param_dict[attr]["std"][c]
@@ -151,7 +150,8 @@ def cross_validation(estimator, X, y, n_folds, return_models=False):
         models += [classifier]
         scores += [accuracy]
 
-    return scores, models if return_models else scores
+    print(scores)
+    return (scores, models) if return_models else scores,
 
 
 def main():
@@ -162,28 +162,27 @@ def main():
     y = df.iloc[:, 4]
 
     # Train and test logistic regression model
-    # scores = cross_validation(LogisticRegression, X, y, folds)
-    # print(scores)
-    # print(sum(scores)/len(scores))
+    scores, = cross_validation(LogisticRegression, X, y, folds)
+    print(sum(scores)/len(scores))
 
     
-    plot_learning_curves(df)
+    # plot_learning_curves(df)
 
-    # Train and test Naive Bayes classification model
-    scores, models = cross_validation(NaiveBayesClassifier, X, y, folds, return_models=True)
-    print("Average scores:", sum(scores)/len(scores))
-    for fold, model in enumerate(models):
-        print("===============================================")
-        print("Naive Bayes -- Fold " + str(fold+1))
-        print("-----------------------------------------------")
-        print("Learned parameters")
-        print(model.X_train[model.y_train == 1].agg(['mean', 'var']))
-        gen_df = model.generate_data(400, 1) # Generate 400 samples of class 1 from model
-        gen_df_params = gen_df.agg(['mean', 'var'])
-        print("-----------------------------------------------")
-        print("Generated data parameters")
-        print(gen_df_params)
-        print("-----------------------------------------------")
+    # # Train and test Naive Bayes classification model
+    # scores, models = cross_validation(NaiveBayesClassifier, X, y, folds, return_models=True)
+    # print("Average scores:", sum(scores)/len(scores))
+    # for fold, model in enumerate(models):
+    #     print("===============================================")
+    #     print("Naive Bayes -- Fold " + str(fold+1))
+    #     print("-----------------------------------------------")
+    #     print("Learned parameters")
+    #     print(model.X_train[model.y_train == 1].agg(['mean', 'var']))
+    #     gen_df = model.generate_data(400, 1) # Generate 400 samples of class 1 from model
+    #     gen_df_params = gen_df.agg(['mean', 'var'])
+    #     print("-----------------------------------------------")
+    #     print("Generated data parameters")
+    #     print(gen_df_params)
+    #     print("-----------------------------------------------")
     
 
 def plot_learning_curves(df):

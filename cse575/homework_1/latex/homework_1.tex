@@ -10,6 +10,9 @@
 
 \usepackage{algorithm}
 \usepackage{algpseudocode}
+\usepackage{verbatim}
+\graphicspath{{images/}}
+\newcommand{\argmax}{\operatornamewithlimits{argmax}}
 % This is just used to generate filler content. You don't need it in an actual
 % homework!
 \usepackage{lipsum}
@@ -214,7 +217,7 @@ $$\mathbf{z}=X\mathbf{\theta}=
 	0.5\\
 	0.5
 \end{bmatrix}$$
-$textbfthbf{\hat{p}}$ represents the model's estimated probabilities of a positive class in vectorized form. When performing prediction, a threshold value of 0.5 is set such that the predicted class is 1 when $p>0.5$ and 0 when $p\leq 0.5$. This threshold effectively draws a discriminant line in the input space. When training, however, The cross-entropy loss is used as a cost function on the estimated probability. When training with batches of data, the total loss is simply the average cost over the training data. This allows us to write the cost function as
+$\textbf{$\hat{p}$}$ represents the model's estimated probabilities of a positive class in vectorized form. When performing prediction, a threshold value of 0.5 is set such that the predicted class is 1 when $p>0.5$ and 0 when $p\leq 0.5$. This threshold effectively draws a discriminant line in the input space. When training, however, The cross-entropy loss is used as a cost function on the estimated probability. When training with batches of data, the total loss is simply the average cost over the training data. This allows us to write the cost function as
 $$J(\mathbf{\theta})=-\frac{1}{m}\sum_{i=1}^my^{(i)}log(\hat{p}^{(i)})+(1-y^{(i)})log(1-\hat{p}^{(i)})$$
 To minimize the loss, we can calculate the gradient of $J(\mathbf{\theta})$ with respect to $\mathbf{\theta}$ and then update $\mathbf{\theta}$ in the negative direction of that gradient. Iterating over this process ad infinitum will converge to the optimal parameters (ignoring issues of perfect separation, etc).
 $$\frac{\delta J(\mathbf{\theta})}{\delta \theta_j}=\frac{\delta J}{\delta \hat{p}}\frac{\delta \hat{p}}{\delta z}\frac{\delta z}{\theta_j}$$
@@ -231,7 +234,7 @@ $$\frac{\delta z}{\delta\theta_j}=x_j$$
 $$\frac{\delta J}{\delta \hat{p}}\frac{\delta \hat{p}}{\delta z}\frac{\delta z}{\theta_j}=\frac{1}{m}\sum_{i=1}^m(\hat{p}^{(i)}-y^{(i)})x_j^{(i)}$$  
 From this result, it is clear that the only calculation we need to complete prior to updating our weights is the sigmoid function.
 It's also worth noting that this result can be written in matrix form, which allows for efficient computation when implementing
-$$\frac{\delta J}{\delta \hat{p}}\frac{\delta \hat{p}}{\delta z}\frac{\delta z}{\theta}=mean((sig(X\mathbf{\theta})-\mathbf{y})\odot X)$$
+$$\frac{\delta J}{\delta \hat{p}}\frac{\delta \hat{p}}{\delta z}\frac{\delta z}{\theta}=\frac{1}{m}X^T(\hat{p}-y)$$
 Now that we know the process of logistic regression, what can we say about the parameters? What do they represent?
 
 Unfortunately, interpreting the parameters learned isn't nearly as straight forward as it is in linear regression models, even though what we're ultimately fitting is a discriminant line in the feature space. However, if we consider the threshold value 0.5 and its relation of the the input to the sigmoid function z, we know that when $z > 0,\,sig(z) > 0.5$. Likewise, when $z\leq 0, \, sig(z) \leq 0.5$. From this, it is obvious that the parameters we are learning are for a line in the feature space at form at $z=0$. Scaling the coefficients of z by any scalar value would result in the same line, so the there are infinite values that $\theta$ could converge to, and this will depend on the the values that the vector is initiated with.
@@ -259,8 +262,40 @@ $$\theta_1x_1+\theta_2x_2+b=0$$
 
 
 	To determine a relationship between Gaussian Naive Bayes and logistic regression, it would help to first have them in a similar form. 
+	
+	The posterior probability of the positive class in Naive Bayes is, by definition
 
-	TODO
+	$$\frac{P(D|Y=1)P(Y=1)}{P(D|Y=1)P(Y=1)+P(D|Y=0)P(Y=0)}$$
+
+	By dividing the numerator and denominator by the numerator, we get
+	$$\frac{1}{1+\frac{P(X|Y=0)P(Y=0)}{P(X|Y=1)P(Y=1)}}$$
+
+	Which can be written as
+	
+	\begin{align*}
+		\frac{1}{1+e^{ln\left(\frac{P(X|Y=0)P(Y=0)}{P(X|Y=1)P(Y=1)}\right)}} &= \frac{1}{1+e^{ln\left( \frac{P(Y=0)}{P(Y=1)} \right) + \sum_i ln\left( \frac{P(X_i|Y=0)}{P(X_i|Y=1)} \right)}} \\
+	\end{align*}
+	
+	Notice that $\frac{P(Y=0)}{P(Y=1)}$ is the definition of odds, and can be written as $\frac{p}{1-p}$.
+
+	$$\frac{1}{1+e^{ln\left( \frac{p}{1-p} \right) + \sum_i ln\left( \frac{P(X_i|Y=0)}{P(X_i|Y=1)} \right)}}$$
+
+	Now, let's unpack the summation to reveal the parameters of the NB classifier\ldots
+
+	\begin{align*}
+		\sum_iln\frac{P(X_i|Y=0)}{P(X_i|Y=1)} &= \sum_iln \frac{\frac{1}{\sqrt{2\pi\sigma_i^2}}exp \left( \frac{-(X_i-\mu_{i0})^2}{2\sigma_i^2} \right)}{\frac{1}{\sqrt{2\pi\sigma_i^2}}exp \left( \frac{-(X_i-\mu_{i1})^2}{2\sigma_i^2} \right)} \\
+		&= \sum_i \left( \frac{\mu_{i0}-\mu_{i1}}{\sigma_i^2}X_i + \frac{\mu_{i1}^2-\mu_{i0}^2}{2\sigma_i^2} \right)
+	\end{align*}
+
+	Plugging the summation back into the original equation, we have
+	$$\frac{1}{1+e^{ln\left( \frac{p}{1-p} \right) + \sum_i \left( \frac{\mu_{i0}-\mu_{i1}}{\sigma_i^2}X_i + \frac{\mu_{i1}^2-\mu_{i0}^2}{2\sigma_i^2} \right)  }}$$
+
+From here, we can see in the exponent that we have a linear combination of the $X_i$ vectors in terms of the parameters of Naive Bayes, along with a constant value
+
+ $$w_0 = \ln\left( \frac{p}{1-p} \right)+ \sum_i \frac{\mu_{i1}^2-\mu_{i0}^2}{2\sigma_i^2}$$ 
+
+ $$w_i= \frac{\mu_{i0}-\mu_{i1}}{\sigma_i^2} $$
+
 	\questionpart
 \textbf{Implementation of Naive Bayes and Logistic Regression.} Compare the two approaches on the bank note authentication dataset. Implement a Gaussian Naive Bayes classifier and a logistic regression classifier. Please write you code from scratch. For the NB classifier, assume the $P(x_i|y)\sim\mathcal{N}(\mu_{i, k}, \sigma_{i, k})$ where $x_i$ is a feature in the bank note data and $y$ is the class label. Use three-fold cross-validation to splite the data and train/test your models.
 \begin{arabicparts}
@@ -280,17 +315,44 @@ $$\theta_1x_1+\theta_2x_2+b=0$$
 				\State \textbf{return $\theta$}
 			\EndProcedure
 			\item[]
-			\Procedure{test}{$x, y, \theta$}
+			\Procedure{predict}{$x, \theta$}
 				\State $z\gets x\cdot\mathbf{\theta}$
 				\State $p \gets sigmoid(z)$
 				\If{$p > 0.5$}
-				\State \mathbf{return 1}
+				\State $\mathbf{return \quad 1}$
 				\Else
-				\State \mathbf{return 0}
+				\State $\mathbf{return \quad 0}$
+				\EndIf
 			\EndProcedure
 		\end{algorithmic}
 	\end{algorithm}
+	\begin{algorithm}
+		\caption{Naive Bayes}
+		\begin{algorithmic}
+			\Procedure{train}{$X, y$}
+				\State $\mathbf{\mu_{j, c}} \gets mean(\{x_{i, j} |y_i = c\})\quad \forall c \in unique(y)$
+				\State $\mathbf{\sigma^2_{j, c}} \gets variance(\{x_{i, j} |y_i = c\}) \quad \forall c \in unique(y)$
+				\State $\mathbf{p} \gets length(\{y_{i}|y_{i}=c\})/length(\mathbf{y}) \quad \forall c \in unique(y)$
+				\State \textbf{return $\mu, \sigma, p$}
+			\EndProcedure
+			\item[]
+				\Procedure{predict}{$x, \mathbf{\mu}, \mathbf{\sigma}, \mathbf{p}$}
+			\State $\mathcal{L}_c = \Pi_j \, \mu_{j,c}$	
+			\State $\mathbf {\textbf{return} \argmax_c(\mathcal{L}_c*\mathbf{p}_c)}$
+			\EndProcedure
+		\end{algorithmic}
+	\end{algorithm}
+	\questionpart
+	Plot a learning curve: The accuracy vs the size of the training set. Plot 6 points for the curve, using $[0.01, 0.01, 0.05, 0.1, 0.625, 1]$ random fractions of your training set, and testing on the full test set each time. Average your results over 5 runs using each random fraction of the training set. Plot both the Naive Bayes and the logistic regression learning cureves on the same figure. 
 
+	\begin{center}
+		\includegraphics[scale=0.7]{Figure_1.png}
+	\end{center}
+	\questionpart
+	Show the power of the generative model: Use your trained Naive Bayes classifier to generate 500 examples from class $y=1$. Report the mean and variance of the generated examples and the corresponding training data (for each fold, over 1 run). Compare the results with the parameters learned from the training set.
+
+	My implementation uses the unbiased variance estimator (sample variance). The learned parameters and the parameters of the generated data are very similar, which is to be expected, as the generated data is generated using the learned parameters.
+	\verbatiminput{results.txt}
 \end{arabicparts}
 \end{alphaparts}
 

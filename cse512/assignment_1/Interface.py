@@ -14,10 +14,16 @@ def loadratings(ratingstablename, ratingsfilepath, openconnection):
     cur = openconnection.cursor()
     cur.execute("CREATE TABLE {} (userid integer, movieid integer, rating float, time integer);".format(ratingstablename))
     with open(ratingsfilepath, 'r') as f:
-        for line in f:
-            tup = line.split("::")
-            tup = tuple(tup)
-            cur.execute("INSERT INTO {} VALUES ({}, {}, {}, {});".format(ratingstablename, *tup))
+        lines = f.readlines(128000000)
+        while lines:
+            insertQuery = "INSERT INTO {} VALUES "
+            tuples = []
+            for line in lines:
+                tup = line.split("::")
+                tup = tuple(tup)
+                tuples.append("({}, {}, {}, {})".format(*tup))
+            cur.execute("INSERT INTO {} VALUES {};".format(ratingstablename, ", ".join(tuples)))
+            lines = f.readlines(128000000)
 
 def rangepartition(ratingstablename, numberofpartitions, openconnection):
     cur = openconnection.cursor()

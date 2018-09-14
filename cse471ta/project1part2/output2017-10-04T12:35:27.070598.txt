@@ -1,0 +1,121 @@
+
+==================
+Question q1: 3/3
+Question q2: 3/3
+Question q3: 3/3
+Question q4: 3/3
+Question q5: 3/3
+Question q6: 3/3
+Question q7: 5/4
+Question q8: 3/3
+------------------
+Total: 26/25
+12.8822000027
+==================
+Question q1: 0/3
+Question q2: 0/3
+Question q3: 0/3
+Question q4: 0/3
+Question q5: 0/3
+Question q6: 0/3
+Question q7: 0/4
+Question q8: 0/3
+------------------
+Total: 0/25
+0.0950338840485
+==================
+Question q1: 3/3
+Question q2: 3/3
+Question q3: 3/3
+Question q4: 3/3
+Question q5: 3/3
+Question q6: 3/3
+Question q7: 4/4
+Question q8: 3/3
+------------------
+Total: 25/25
+2.04378199577
+==================
+Question q1: 3/3
+Question q2: 3/3
+Question q3: 3/3
+Question q4: 3/3
+Question q5: 3/3
+Question q6: 3/3
+Question q7: 5/4
+Question q8: 3/3
+------------------
+Total: 26/25
+5.39275383949
+==================
+Question q1: 3/3
+Question q2: 3/3
+Question q3: 3/3
+Question q4: 3/3
+Question q5: 3/3
+Question q6: 3/3
+Question q7: 5/4
+Question q8: 3/3
+------------------
+Total: 26/25
+17.3467769623
+==================
+Question q1: 3/3
+Question q2: 3/3
+Question q3: 3/3
+Question q4: 3/3
+Question q5: 3/3
+Question q6: 2/3
+Question q7: 5/4
+Question q8: 3/3
+------------------
+Total: 25/25
+17.803030014
+==================
+Question q1: 3/3
+Question q2: 3/3
+Question q3: 3/3
+Question q4: 3/3
+Question q5: 3/3
+Question q6: 3/3
+Question q7: 5/4
+Question q8: 3/3
+------------------
+Total: 26/25
+2.87023591995
+==================
+Question q1: 3/3
+Question q2: 3/3
+Question q3: 3/3
+Question q4: 3/3
+Question q5: 3/3
+Question q6: 3/3
+Question q7: 3/4
+Question q8: 3/3
+------------------
+Total: 24/25
+9.40349292755
+==================
+Question q1: 3/3
+Question q2: 3/3
+Question q3: 3/3
+Question q4: 3/3
+Question q5: 3/3
+Question q6: 3/3
+Question q7: 5/4
+Question q8: 3/3
+------------------
+Total: 26/25
+29.8325939178
+==================
+Question q1: 0/3
+Question q2: 0/3
+Question q3: 0/3
+Question q4: 0/3
+Question q5: 0/3
+Question q6: 0/3
+Question q7: 0/4
+Question q8: 0/3
+------------------
+Total: 0/25
+0.0458948612213

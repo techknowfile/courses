@@ -1,0 +1,89 @@
+// Process each row in grammar
+	for(unsigned int i = 0; i < (*grammar).size(); i++){
+		// Current rule
+		string current_lhs = (*grammar)[i][0].name;
+		int symbolCount = (*grammar)[i].size();
+
+		// for every item after the LHS
+		for (int j = 1; j < symbolCount; j++){
+			// get current symbol
+			struct symbol current_symbol = (*grammar)[i][j];
+
+			// Find current NT in RHS of rule
+			if (current_follow_set_key.compare(current_symbol.name) == 0){
+				//cout << "CURRENT FOLLOW SET KEY " << current_follow_set_key << " found in " << current_lhs <<endl;
+				//cout << "    >> Current LHS: " << current_lhs << endl;
+				//Check if it's the last symbol in rule
+				if (j == symbolCount - 1){
+					set<string> lhs_follow_set = (*follows).at(current_lhs);
+					//cout << " ## LAST SYMBOL IN RULE" << endl;
+					for (auto it2 = lhs_follow_set.begin(); it2 != lhs_follow_set.end(); it2++){
+
+						// Last symbol in rule. Add follow set of LHS NT to current symbol's follow set.
+						(*it).second.insert(*it2);
+						//cout << "          " << (*it2) << " INSERTED INTO1 " << current_follow_set_key << endl;
+					}
+					//cout << "    END OF LAST" << endl;
+					break;
+				}
+
+				else{
+					int k = j+1;
+					bool noEpsilonFound = false;
+					bool endedByTerminal = false;
+					while(!noEpsilonFound){
+						
+
+						struct symbol current = (*grammar)[i][k];
+						//cout << "        Current Symbol: " << current.name << endl;
+						if (current.isTerminal){
+							(*it).second.insert(current.name);
+							//cout << "          " << (current.name) << " INSERTED INTO2 " << current_follow_set_key << endl;
+							endedByTerminal = true;
+							break;
+						}
+						else if (!current.isTerminal){
+							set<string> temp_set = (*firsts).at(current.name);
+							bool epsilonFound = false;
+
+							for (set<string>::iterator it2=temp_set.begin(); it2!=temp_set.end(); ++it2){
+								if ((*it2).compare("#") == 0){
+									// remove epsilon
+									temp_set.erase("#");
+									epsilonFound = true;
+									break;
+								}
+								else{
+									//(*follows)[current_follow_set_key]
+									(*it).second.insert(*it2);
+									//cout << "          " << (*it2) << " INSERTED INTO3 " << current_follow_set_key << endl;
+								}
+								
+							}
+							if (!epsilonFound){
+								// epsilon not found, so set noEpsilonFound to true to prevent next symbol for being looked at
+								noEpsilonFound = true;
+							}
+						}
+
+
+						k++;
+						if (k == symbolCount){
+							break;
+						}
+					}
+					if (noEpsilonFound == false && ! endedByTerminal){
+						//cout << "   ---  NO EPSILON  --" << endl;
+						set<string> lhs_follow_set = (*follows).at(current_lhs);
+						for (auto it2 = lhs_follow_set.begin(); it2 != lhs_follow_set.end(); it2++){
+							// All following symbols have epsilon. Add FOLLOW set of LHS to current symbol's FOLLOW set.
+							(*it).second.insert(*it2);
+							//cout << "          " << (*it2) << " INSERTED INTO4 " << current_follow_set_key << endl;
+						}
+						//cout << "   ---  END NO EPSILON  --" << endl;
+					}
+				}
+			}
+		}
+		
+	}

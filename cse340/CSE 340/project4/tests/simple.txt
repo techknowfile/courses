@@ -1,0 +1,10 @@
+VAR
+    a, d : t1;
+{
+    SWITCH a {
+        CASE 1:
+        {
+            d = d + 3.5;
+        }
+    }
+}

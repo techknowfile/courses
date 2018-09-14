@@ -1,0 +1,157 @@
+
+==================
+Question q1: 3/3
+Question q2: 3/3
+Question q3: 3/3
+Question q4: 3/3
+Question q5: 3/3
+Question q6: 3/3
+Question q7: 4/4
+Question q8: 3/3
+------------------
+Total: 25/25
+10.2821238041
+==================
+Question q1: 3/3
+Question q2: 3/3
+Question q3: 3/3
+Question q4: 3/3
+Question q5: 3/3
+Question q6: 3/3
+Question q7: 5/4
+Question q8: 3/3
+------------------
+Total: 26/25
+31.1648919582
+==================
+Question q1: 3/3
+Question q2: 3/3
+Question q3: 3/3
+Question q4: 3/3
+Question q5: 3/3
+Question q6: 3/3
+Question q7: 5/4
+Question q8: 3/3
+------------------
+Total: 26/25
+19.1449949741
+==================
+Question q1: 3/3
+Question q2: 3/3
+Question q3: 3/3
+Question q4: 3/3
+Question q5: 3/3
+Question q6: 0/3
+Question q7: 3/4
+Question q8: 3/3
+------------------
+Total: 21/25
+12.4606831074
+==================
+Question q1: 3/3
+Question q2: 3/3
+Question q3: 3/3
+Question q4: 3/3
+Question q5: 3/3
+Question q6: 3/3
+Question q7: 5/4
+Question q8: 3/3
+------------------
+Total: 26/25
+12.5812571049
+==================
+Question q1: 3/3
+Question q2: 3/3
+Question q3: 3/3
+Question q4: 3/3
+Question q5: 3/3
+Question q6: 3/3
+Question q7: 5/4
+Question q8: 3/3
+------------------
+Total: 26/25
+15.2524859905
+==================
+Question q1: 3/3
+Question q2: 3/3
+Question q3: 3/3
+Question q4: 3/3
+Question q5: 3/3
+Question q6: 2/3
+Question q7: 2/4
+Question q8: 3/3
+------------------
+Total: 22/25
+14.0455639362
+==================
+Question q1: 3/3
+Question q2: 3/3
+Question q3: 3/3
+Question q4: 3/3
+Question q5: 3/3
+Question q6: 3/3
+Question q7: 5/4
+Question q8: 3/3
+------------------
+Total: 26/25
+0.97073507309
+==================
+Question q1: 3/3
+Question q2: 3/3
+Question q3: 3/3
+Question q4: 3/3
+Question q5: 3/3
+Question q6: 2/3
+Question q7: 5/4
+Question q8: 3/3
+------------------
+Total: 25/25
+17.25299716
+==================
+Question q1: 3/3
+Question q2: 3/3
+Question q3: 3/3
+Question q4: 3/3
+Question q5: 3/3
+Question q6: 3/3
+Question q7: 5/4
+Question q8: 3/3
+------------------
+Total: 26/25
+44.8711590767
+==================
+Question q1: 3/3
+Question q2: 3/3
+Question q3: 3/3
+Question q4: 3/3
+Question q5: 3/3
+Question q6: 3/3
+Question q7: 5/4
+Question q8: 3/3
+------------------
+Total: 26/25
+5.01387190819
+==================
+Question q1: 3/3
+Question q2: 3/3
+Question q3: 3/3
+Question q4: 3/3
+Question q5: 3/3
+Question q6: 3/3
+Question q7: 3/4
+Question q8: 3/3
+------------------
+Total: 24/25
+1.94803595543
+==================
+Question q1: 3/3
+Question q2: 3/3
+Question q3: 3/3
+Question q4: 3/3
+Question q5: 3/3
+Question q6: 3/3
+Question q7: 3/4
+Question q8: 3/3
+------------------
+Total: 24/25
+5.93814206123

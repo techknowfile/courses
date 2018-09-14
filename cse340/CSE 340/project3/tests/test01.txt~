@@ -1,0 +1,36 @@
+program varsection idlist body stmtlist stmt assignstmt expr primary op printstmt whilestmt ifstmt condition relop switchstmt caselist case defaultcase #
+program -> varsection body #
+varsection -> idlist SEMICOLON #
+idlist -> ID COMMA idlist #
+idlist -> ID #
+body -> LBRACE stmtlist RBRACE #
+stmtlist -> stmt stmtlist #
+stmtlist -> stmt #
+stmt -> assignstmt #
+stmt -> printstmt #
+stmt -> while_stmt #
+stmt -> ifstmt #
+stmt -> switchstmt #
+assignstmt -> ID EQUAL primary SEMICOLON #
+assignstmt -> ID EQUAL expr SEMICOLON #
+expr -> primary op primary #
+primary -> ID #
+primary -> NUM #
+op -> PLUS #
+op -> MINUS #
+op -> MULT #
+op -> DIV #
+printstmt -> PRINT ID SEMICOLON #
+whilestmt -> WHILE condition body #
+ifstmt -> IF condition body #
+condition -> primary relop primary #
+relop -> GREATER #
+relop -> LESS #
+relop -> NOTEQUAL #
+switchstmt -> SWITCH ID LBRACE caselist RBRACE #
+switchstmt -> SWITCH ID LBRACE caselist defaultcase RBRACE #
+caselist -> case caselist #
+caselist -> case #
+case -> CASE NUM COLON body #
+defaultcase -> DEFAULT COLON body #
+##

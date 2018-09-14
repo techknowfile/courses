@@ -1,0 +1,569 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+Actions	multiagent/game.py	/^class Actions:$/;"	c
+Agent	multiagent/game.py	/^class Agent:$/;"	c
+AgentState	multiagent/game.py	/^class AgentState:$/;"	c
+AlphaBetaAgent	multiagent/multiAgents.py	/^class AlphaBetaAgent(MultiAgentSearchAgent):$/;"	c
+BACKGROUND_COLOR	multiagent/graphicsDisplay.py	/^BACKGROUND_COLOR = formatColor(0,0,0)$/;"	v
+BONUS_PIC	multiagent/projectParams.py	/^BONUS_PIC = False$/;"	v
+CAPSULE_COLOR	multiagent/graphicsDisplay.py	/^CAPSULE_COLOR = formatColor(1,1,1)$/;"	v
+CAPSULE_SIZE	multiagent/graphicsDisplay.py	/^CAPSULE_SIZE = 0.25$/;"	v
+COLLISION_TOLERANCE	multiagent/pacman.py	/^COLLISION_TOLERANCE = 0.7 # How close ghosts must be to Pacman to kill$/;"	v
+ClassicGameRules	multiagent/pacman.py	/^class ClassicGameRules:$/;"	c
+Configuration	multiagent/game.py	/^class Configuration:$/;"	c
+Counter	multiagent/grading.py	/^class Counter(dict):$/;"	c
+Counter	multiagent/util.py	/^class Counter(dict):$/;"	c
+DEFAULT_GRID_SIZE	multiagent/graphicsDisplay.py	/^DEFAULT_GRID_SIZE = 30.0$/;"	v
+DISPLAY_MOVES	multiagent/textDisplay.py	/^DISPLAY_MOVES = False$/;"	v
+DRAW_EVERY	multiagent/textDisplay.py	/^DRAW_EVERY = 1$/;"	v
+DirectionalGhost	multiagent/ghostAgents.py	/^class DirectionalGhost( GhostAgent ):$/;"	c
+Directions	multiagent/game.py	/^class Directions:$/;"	c
+EAST	multiagent/game.py	/^    EAST = 'East'$/;"	v	class:Directions
+EAST_KEY	multiagent/keyboardAgents.py	/^    EAST_KEY  = "l"$/;"	v	class:KeyboardAgent2
+EAST_KEY	multiagent/keyboardAgents.py	/^    EAST_KEY  = 'd'$/;"	v	class:KeyboardAgent
+ERROR_HINT_MAP	multiagent/autograder.py	/^ERROR_HINT_MAP = {$/;"	v
+EvalAgentTest	multiagent/multiagentTestClasses.py	/^class EvalAgentTest(testClasses.TestCase):$/;"	c
+ExpectimaxAgent	multiagent/multiAgents.py	/^class ExpectimaxAgent(MultiAgentSearchAgent):$/;"	c
+FOOD_COLOR	multiagent/graphicsDisplay.py	/^FOOD_COLOR = formatColor(1,1,1)$/;"	v
+FOOD_SIZE	multiagent/graphicsDisplay.py	/^FOOD_SIZE = 0.1$/;"	v
+FRAME_NUMBER	multiagent/graphicsDisplay.py	/^FRAME_NUMBER = 0$/;"	v
+FirstPersonPacmanGraphics	multiagent/graphicsDisplay.py	/^class FirstPersonPacmanGraphics(PacmanGraphics):$/;"	c
+FixedRandom	multiagent/util.py	/^class FixedRandom:$/;"	c
+GHOST_COLORS	multiagent/graphicsDisplay.py	/^GHOST_COLORS = []$/;"	v
+GHOST_SHAPE	multiagent/graphicsDisplay.py	/^GHOST_SHAPE = [$/;"	v
+GHOST_SIZE	multiagent/graphicsDisplay.py	/^GHOST_SIZE = 0.65$/;"	v
+GHOST_SPEED	multiagent/pacman.py	/^    GHOST_SPEED=1.0$/;"	v	class:GhostRules
+GHOST_VEC_COLORS	multiagent/graphicsDisplay.py	/^GHOST_VEC_COLORS = map(colorToVector, GHOST_COLORS)$/;"	v
+Game	multiagent/game.py	/^class Game:$/;"	c
+GameState	multiagent/pacman.py	/^class GameState:$/;"	c
+GameStateData	multiagent/game.py	/^class GameStateData:$/;"	c
+GhostAgent	multiagent/ghostAgents.py	/^class GhostAgent( Agent ):$/;"	c
+GhostRules	multiagent/pacman.py	/^class GhostRules:$/;"	c
+Grades	multiagent/grading.py	/^class Grades:$/;"	c
+GradingAgent	multiagent/multiagentTestClasses.py	/^class GradingAgent(Agent):$/;"	c
+GraphGameTreeTest	multiagent/multiagentTestClasses.py	/^class GraphGameTreeTest(testClasses.TestCase):$/;"	c
+GreedyAgent	multiagent/pacmanAgents.py	/^class GreedyAgent(Agent):$/;"	c
+Grid	multiagent/game.py	/^class Grid:$/;"	c
+HackedPartialCreditQuestion	multiagent/testClasses.py	/^class HackedPartialCreditQuestion(Question):$/;"	c
+INFO_PANE_COLOR	multiagent/graphicsDisplay.py	/^INFO_PANE_COLOR = formatColor(.4,.4,0)$/;"	v
+INFO_PANE_HEIGHT	multiagent/graphicsDisplay.py	/^INFO_PANE_HEIGHT = 35$/;"	v
+InfoPane	multiagent/graphicsDisplay.py	/^class InfoPane:$/;"	c
+KeyboardAgent	multiagent/keyboardAgents.py	/^class KeyboardAgent(Agent):$/;"	c
+KeyboardAgent2	multiagent/keyboardAgents.py	/^class KeyboardAgent2(KeyboardAgent):$/;"	c
+LASER_COLOR	multiagent/graphicsDisplay.py	/^LASER_COLOR = formatColor(1,0,0)$/;"	v
+LASER_SIZE	multiagent/graphicsDisplay.py	/^LASER_SIZE = 0.02$/;"	v
+LEFT	multiagent/game.py	/^    LEFT =       {NORTH: WEST,$/;"	v	class:Directions
+Layout	multiagent/layout.py	/^class Layout:$/;"	c
+LeftTurnAgent	multiagent/pacmanAgents.py	/^class LeftTurnAgent(game.Agent):$/;"	c
+MinimaxAgent	multiagent/multiAgents.py	/^class MinimaxAgent(MultiAgentSearchAgent):$/;"	c
+MultiAgentSearchAgent	multiagent/multiAgents.py	/^class MultiAgentSearchAgent(Agent):$/;"	c
+MultiagentTreeProblem	multiagent/multiagentTestClasses.py	/^class MultiagentTreeProblem(object):$/;"	c
+MultiagentTreeState	multiagent/multiagentTestClasses.py	/^class MultiagentTreeState(object):$/;"	c
+NORTH	multiagent/game.py	/^    NORTH = 'North'$/;"	v	class:Directions
+NORTH_KEY	multiagent/keyboardAgents.py	/^    NORTH_KEY = 'i'$/;"	v	class:KeyboardAgent2
+NORTH_KEY	multiagent/keyboardAgents.py	/^    NORTH_KEY = 'w'$/;"	v	class:KeyboardAgent
+NullGraphics	multiagent/textDisplay.py	/^class NullGraphics:$/;"	c
+NumberPassedQuestion	multiagent/testClasses.py	/^class NumberPassedQuestion(Question):$/;"	c
+OLD_STDERR	multiagent/game.py	/^    OLD_STDERR = None$/;"	v	class:Game
+OLD_STDOUT	multiagent/game.py	/^    OLD_STDOUT = None$/;"	v	class:Game
+ORIGINAL_SUBMISSIONS	batch_grader.py	/^ORIGINAL_SUBMISSIONS = "original_submissions\/"$/;"	v
+PACMAN_CAPTURE_OUTLINE_WIDTH	multiagent/graphicsDisplay.py	/^PACMAN_CAPTURE_OUTLINE_WIDTH = 4$/;"	v
+PACMAN_COLOR	multiagent/graphicsDisplay.py	/^PACMAN_COLOR = formatColor(255.0\/255.0,255.0\/255.0,61.0\/255)$/;"	v
+PACMAN_OUTLINE_WIDTH	multiagent/graphicsDisplay.py	/^PACMAN_OUTLINE_WIDTH = 2$/;"	v
+PACMAN_SCALE	multiagent/graphicsDisplay.py	/^PACMAN_SCALE = 0.5$/;"	v
+PACMAN_SPEED	multiagent/pacman.py	/^    PACMAN_SPEED=1$/;"	v	class:PacmanRules
+POSTSCRIPT_OUTPUT_DIR	multiagent/graphicsDisplay.py	/^POSTSCRIPT_OUTPUT_DIR = 'frames'$/;"	v
+PROJECT_NAME	multiagent/projectParams.py	/^PROJECT_NAME = 'Project 2: Multiagent search'$/;"	v
+PROJECT_TEST_CLASSES	multiagent/projectParams.py	/^PROJECT_TEST_CLASSES = 'multiagentTestClasses.py'$/;"	v
+PacmanGameTreeTest	multiagent/multiagentTestClasses.py	/^class PacmanGameTreeTest(testClasses.TestCase):$/;"	c
+PacmanGraphics	multiagent/graphicsDisplay.py	/^class PacmanGraphics:$/;"	c
+PacmanGraphics	multiagent/textDisplay.py	/^class PacmanGraphics:$/;"	c
+PacmanRules	multiagent/pacman.py	/^class PacmanRules:$/;"	c
+PartialCreditQuestion	multiagent/testClasses.py	/^class PartialCreditQuestion(Question):$/;"	c
+PassAllTestsQuestion	multiagent/testClasses.py	/^class PassAllTestsQuestion(Question):$/;"	c
+PolyAgent	multiagent/multiagentTestClasses.py	/^class PolyAgent(Agent):$/;"	c
+PriorityQueue	multiagent/util.py	/^class PriorityQueue:$/;"	c
+PriorityQueueWithFunction	multiagent/util.py	/^class PriorityQueueWithFunction(PriorityQueue):$/;"	c
+Q6PartialCreditQuestion	multiagent/testClasses.py	/^class Q6PartialCreditQuestion(Question):$/;"	c
+QUIET	multiagent/textDisplay.py	/^QUIET = False # Supresses output$/;"	v
+Question	multiagent/testClasses.py	/^class Question(object):$/;"	c
+Queue	multiagent/util.py	/^class Queue:$/;"	c
+REVERSE	multiagent/game.py	/^    REVERSE = {NORTH: SOUTH,$/;"	v	class:Directions
+RIGHT	multiagent/game.py	/^    RIGHT =      dict([(y,x) for x, y in LEFT.items()])$/;"	v	class:Directions
+RandomGhost	multiagent/ghostAgents.py	/^class RandomGhost( GhostAgent ):$/;"	c
+ReflexAgent	multiagent/multiAgents.py	/^class ReflexAgent(Agent):$/;"	c
+SAVE_POSTSCRIPT	multiagent/graphicsDisplay.py	/^SAVE_POSTSCRIPT = False$/;"	v
+SCARED_COLOR	multiagent/graphicsDisplay.py	/^SCARED_COLOR = formatColor(1,1,1)$/;"	v
+SCARED_TIME	multiagent/pacman.py	/^SCARED_TIME = 40    # Moves ghosts are scared$/;"	v
+SCORE_COLOR	multiagent/graphicsDisplay.py	/^SCORE_COLOR = formatColor(.9, .9, .9)$/;"	v
+SLEEP_TIME	multiagent/textDisplay.py	/^SLEEP_TIME = 0 # This can be overwritten by __init__$/;"	v
+SOUTH	multiagent/game.py	/^    SOUTH = 'South'$/;"	v	class:Directions
+SOUTH_KEY	multiagent/keyboardAgents.py	/^    SOUTH_KEY = 'k'$/;"	v	class:KeyboardAgent2
+SOUTH_KEY	multiagent/keyboardAgents.py	/^    SOUTH_KEY = 's'$/;"	v	class:KeyboardAgent
+STOP	multiagent/game.py	/^    STOP = 'Stop'$/;"	v	class:Directions
+STOP_KEY	multiagent/keyboardAgents.py	/^    STOP_KEY = 'q'$/;"	v	class:KeyboardAgent
+STOP_KEY	multiagent/keyboardAgents.py	/^    STOP_KEY = 'u'$/;"	v	class:KeyboardAgent2
+STUDENT_CODE_DEFAULT	multiagent/projectParams.py	/^STUDENT_CODE_DEFAULT = 'multiAgents.py'$/;"	v
+SUBMISSIONS	batch_grader.py	/^SUBMISSIONS = "submissions\/"$/;"	v
+Stack	multiagent/util.py	/^class Stack:$/;"	c
+TEAM_COLORS	multiagent/graphicsDisplay.py	/^TEAM_COLORS = GHOST_COLORS[:2]$/;"	v
+TIME_PENALTY	multiagent/pacman.py	/^TIME_PENALTY = 1 # Number of points lost each round$/;"	v
+TOLERANCE	multiagent/game.py	/^    TOLERANCE = .001$/;"	v	class:Actions
+TestCase	multiagent/testClasses.py	/^class TestCase(object):$/;"	c
+TestParser	multiagent/testParser.py	/^class TestParser(object):$/;"	c
+TimeoutFunction	multiagent/util.py	/^class TimeoutFunction:$/;"	c
+TimeoutFunctionException	multiagent/util.py	/^class TimeoutFunctionException(Exception):$/;"	c
+VERBOSE	multiagent/multiagentTestClasses.py	/^VERBOSE = False$/;"	v
+VISIBILITY_MATRIX_CACHE	multiagent/layout.py	/^VISIBILITY_MATRIX_CACHE = {}$/;"	v
+WALL_COLOR	multiagent/graphicsDisplay.py	/^WALL_COLOR = formatColor(0.0\/255.0, 51.0\/255.0, 255.0\/255.0)$/;"	v
+WALL_RADIUS	multiagent/graphicsDisplay.py	/^WALL_RADIUS = 0.15$/;"	v
+WEST	multiagent/game.py	/^    WEST = 'West'$/;"	v	class:Directions
+WEST_KEY	multiagent/keyboardAgents.py	/^    WEST_KEY  = 'a'$/;"	v	class:KeyboardAgent
+WEST_KEY	multiagent/keyboardAgents.py	/^    WEST_KEY  = 'j'$/;"	v	class:KeyboardAgent2
+WritableNull	multiagent/util.py	/^class WritableNull:$/;"	c
+_BOINC_ENABLED	multiagent/game.py	/^    _BOINC_ENABLED = False$/;"	v
+_BOINC_ENABLED	multiagent/game.py	/^    _BOINC_ENABLED = True$/;"	v	class:GameStateData
+_MUTED	multiagent/util.py	/^_MUTED = False$/;"	v
+_ORIGINAL_STDERR	multiagent/util.py	/^_ORIGINAL_STDERR = None$/;"	v
+_ORIGINAL_STDOUT	multiagent/util.py	/^_ORIGINAL_STDOUT = None$/;"	v
+__add__	multiagent/util.py	/^    def __add__( self, y ):$/;"	m	class:Counter	file:
+__call__	multiagent/util.py	/^    def __call__(self, *args, **keyArgs):$/;"	m	class:TimeoutFunction	file:
+__eq__	multiagent/game.py	/^    def __eq__( self, other ):$/;"	m	class:AgentState	file:
+__eq__	multiagent/game.py	/^    def __eq__( self, other ):$/;"	m	class:GameStateData	file:
+__eq__	multiagent/game.py	/^    def __eq__(self, other):$/;"	m	class:Configuration	file:
+__eq__	multiagent/game.py	/^    def __eq__(self, other):$/;"	m	class:Grid	file:
+__eq__	multiagent/pacman.py	/^    def __eq__( self, other ):$/;"	m	class:GameState	file:
+__getitem__	multiagent/game.py	/^    def __getitem__(self, i):$/;"	m	class:Grid	file:
+__getitem__	multiagent/grading.py	/^  def __getitem__(self, idx):$/;"	m	class:Counter	file:
+__getitem__	multiagent/util.py	/^    def __getitem__(self, idx):$/;"	m	class:Counter	file:
+__hash__	multiagent/game.py	/^    def __hash__( self ):$/;"	m	class:GameStateData	file:
+__hash__	multiagent/game.py	/^    def __hash__(self):$/;"	m	class:AgentState	file:
+__hash__	multiagent/game.py	/^    def __hash__(self):$/;"	m	class:Configuration	file:
+__hash__	multiagent/game.py	/^    def __hash__(self):$/;"	m	class:Grid	file:
+__hash__	multiagent/pacman.py	/^    def __hash__( self ):$/;"	m	class:GameState	file:
+__init__	multiagent/game.py	/^    def __init__( self, agents, display, rules, startingIndex=0, muteAgents=False, catchExceptions=False ):$/;"	m	class:Game
+__init__	multiagent/game.py	/^    def __init__( self, prevState = None ):$/;"	m	class:GameStateData
+__init__	multiagent/game.py	/^    def __init__( self, startConfiguration, isPacman ):$/;"	m	class:AgentState
+__init__	multiagent/game.py	/^    def __init__(self, index=0):$/;"	m	class:Agent
+__init__	multiagent/game.py	/^    def __init__(self, pos, direction):$/;"	m	class:Configuration
+__init__	multiagent/game.py	/^    def __init__(self, width, height, initialValue=False, bitRepresentation=None):$/;"	m	class:Grid
+__init__	multiagent/ghostAgents.py	/^    def __init__( self, index ):$/;"	m	class:GhostAgent
+__init__	multiagent/ghostAgents.py	/^    def __init__( self, index, prob_attack=0.8, prob_scaredFlee=0.8 ):$/;"	m	class:DirectionalGhost
+__init__	multiagent/grading.py	/^  def __init__(self, projectName, questionsAndMaxesList, edxOutput=False, muteOutput=False):$/;"	m	class:Grades
+__init__	multiagent/graphicsDisplay.py	/^    def __init__(self, layout, gridSize):$/;"	m	class:InfoPane
+__init__	multiagent/graphicsDisplay.py	/^    def __init__(self, zoom = 1.0, showGhosts = True, capture = False, frameTime=0):$/;"	m	class:FirstPersonPacmanGraphics
+__init__	multiagent/graphicsDisplay.py	/^    def __init__(self, zoom=1.0, frameTime=0.0, capture=False):$/;"	m	class:PacmanGraphics
+__init__	multiagent/keyboardAgents.py	/^    def __init__( self, index = 0 ):$/;"	m	class:KeyboardAgent
+__init__	multiagent/layout.py	/^    def __init__(self, layoutText):$/;"	m	class:Layout
+__init__	multiagent/multiAgents.py	/^    def __init__(self, evalFn = 'scoreEvaluationFunction', depth = '2'):$/;"	m	class:MultiAgentSearchAgent
+__init__	multiagent/multiagentTestClasses.py	/^    def __init__(self, numAgents, startState, winStates, loseStates, successors, evaluation):$/;"	m	class:MultiagentTreeProblem
+__init__	multiagent/multiagentTestClasses.py	/^    def __init__(self, problem, state):$/;"	m	class:MultiagentTreeState
+__init__	multiagent/multiagentTestClasses.py	/^    def __init__(self, question, testDict):$/;"	m	class:EvalAgentTest
+__init__	multiagent/multiagentTestClasses.py	/^    def __init__(self, question, testDict):$/;"	m	class:GraphGameTreeTest
+__init__	multiagent/multiagentTestClasses.py	/^    def __init__(self, question, testDict):$/;"	m	class:PacmanGameTreeTest
+__init__	multiagent/multiagentTestClasses.py	/^    def __init__(self, seed, multiAgents, ourPacOptions, depth):$/;"	m	class:PolyAgent
+__init__	multiagent/multiagentTestClasses.py	/^    def __init__(self, seed, studentAgent, optimalActions, altDepthActions, partialPlyBugActions):$/;"	m	class:GradingAgent
+__init__	multiagent/pacman.py	/^    def __init__( self, prevState = None ):$/;"	m	class:GameState
+__init__	multiagent/pacman.py	/^    def __init__(self, timeout=30):$/;"	m	class:ClassicGameRules
+__init__	multiagent/pacmanAgents.py	/^    def __init__(self, evalFn="scoreEvaluation"):$/;"	m	class:GreedyAgent
+__init__	multiagent/testClasses.py	/^    def __init__(self, question, testDict):$/;"	m	class:TestCase
+__init__	multiagent/testClasses.py	/^    def __init__(self, questionDict, display):$/;"	m	class:Question
+__init__	multiagent/testParser.py	/^    def __init__(self, path):$/;"	m	class:TestParser
+__init__	multiagent/textDisplay.py	/^    def __init__(self, speed=None):$/;"	m	class:PacmanGraphics
+__init__	multiagent/util.py	/^    def  __init__(self):$/;"	m	class:PriorityQueue
+__init__	multiagent/util.py	/^    def  __init__(self, priorityFunction):$/;"	m	class:PriorityQueueWithFunction
+__init__	multiagent/util.py	/^    def __init__(self):$/;"	m	class:FixedRandom
+__init__	multiagent/util.py	/^    def __init__(self):$/;"	m	class:Queue
+__init__	multiagent/util.py	/^    def __init__(self):$/;"	m	class:Stack
+__init__	multiagent/util.py	/^    def __init__(self, function, timeout):$/;"	m	class:TimeoutFunction
+__mul__	multiagent/util.py	/^    def __mul__(self, y ):$/;"	m	class:Counter	file:
+__radd__	multiagent/util.py	/^    def __radd__(self, y):$/;"	m	class:Counter	file:
+__setitem__	multiagent/game.py	/^    def __setitem__(self, key, item):$/;"	m	class:Grid	file:
+__str__	multiagent/game.py	/^    def __str__( self ):$/;"	m	class:AgentState	file:
+__str__	multiagent/game.py	/^    def __str__( self ):$/;"	m	class:GameStateData	file:
+__str__	multiagent/game.py	/^    def __str__(self):$/;"	m	class:Configuration	file:
+__str__	multiagent/game.py	/^    def __str__(self):$/;"	m	class:Grid	file:
+__str__	multiagent/layout.py	/^    def __str__(self):$/;"	m	class:Layout	file:
+__str__	multiagent/pacman.py	/^    def __str__( self ):$/;"	m	class:GameState	file:
+__str__	multiagent/testClasses.py	/^    def __str__(self):$/;"	m	class:TestCase	file:
+__sub__	multiagent/util.py	/^    def __sub__( self, y ):$/;"	m	class:Counter	file:
+_adjust_coords	multiagent/graphicsUtils.py	/^def _adjust_coords(coord_list, x, y):$/;"	f
+_agentCrash	multiagent/game.py	/^    def _agentCrash( self, agentIndex, quiet=False):$/;"	m	class:Game
+_canvas	multiagent/graphicsUtils.py	/^_canvas = None      # The canvas which holds graphics$/;"	v
+_canvas_col	multiagent/graphicsUtils.py	/^_canvas_col = None      # Current colour (set to black below)$/;"	v
+_canvas_tfonts	multiagent/graphicsUtils.py	/^    _canvas_tfonts = ['times', 'lucidasans-24']$/;"	v
+_canvas_tserifs	multiagent/graphicsUtils.py	/^_canvas_tserifs = 0$/;"	v
+_canvas_tsize	multiagent/graphicsUtils.py	/^_canvas_tsize = 12$/;"	v
+_canvas_x	multiagent/graphicsUtils.py	/^_canvas_x = None      # Current position on canvas$/;"	v
+_canvas_xs	multiagent/graphicsUtils.py	/^_canvas_xs = None      # Size of canvas object$/;"	v
+_canvas_y	multiagent/graphicsUtils.py	/^_canvas_y = None$/;"	v
+_canvas_ys	multiagent/graphicsUtils.py	/^_canvas_ys = None$/;"	v
+_cellIndexToPosition	multiagent/game.py	/^    def _cellIndexToPosition(self, index):$/;"	m	class:Grid
+_clear_keys	multiagent/graphicsUtils.py	/^def _clear_keys(event=None):$/;"	f
+_ctrl_leftclick	multiagent/graphicsUtils.py	/^def _ctrl_leftclick(event):$/;"	f
+_ctrl_leftclick_loc	multiagent/graphicsUtils.py	/^_ctrl_leftclick_loc = None$/;"	v
+_destroy_window	multiagent/graphicsUtils.py	/^def _destroy_window(event=None):$/;"	f
+_directions	multiagent/game.py	/^    _directions = {Directions.NORTH: (0, 1),$/;"	v	class:Actions
+_directionsAsList	multiagent/game.py	/^    _directionsAsList = _directions.items()$/;"	v	class:Actions
+_foodWallStr	multiagent/game.py	/^    def _foodWallStr( self, hasFood, hasWall ):$/;"	m	class:GameStateData
+_ghostStr	multiagent/game.py	/^    def _ghostStr( self, dir ):$/;"	m	class:GameStateData
+_got_release	multiagent/graphicsUtils.py	/^_got_release = None$/;"	v
+_keypress	multiagent/graphicsUtils.py	/^def _keypress(event):$/;"	f
+_keyrelease	multiagent/graphicsUtils.py	/^def _keyrelease(event):$/;"	f
+_keysdown	multiagent/graphicsUtils.py	/^_keysdown = {}$/;"	v
+_keyswaiting	multiagent/graphicsUtils.py	/^_keyswaiting = {}$/;"	v
+_leftclick	multiagent/graphicsUtils.py	/^def _leftclick(event):$/;"	f
+_leftclick_loc	multiagent/graphicsUtils.py	/^_leftclick_loc = None$/;"	v
+_pacStr	multiagent/game.py	/^    def _pacStr( self, dir ):$/;"	m	class:GameStateData
+_rightclick	multiagent/graphicsUtils.py	/^def _rightclick(event):$/;"	f
+_rightclick_loc	multiagent/graphicsUtils.py	/^_rightclick_loc = None$/;"	v
+_root_window	multiagent/graphicsUtils.py	/^_root_window = None      # The root window for graphics output$/;"	v
+_unpackBits	multiagent/game.py	/^    def _unpackBits(self, bits):$/;"	m	class:Grid
+_unpackInt	multiagent/game.py	/^    def _unpackInt(self, packed, size):$/;"	m	class:Grid
+add	multiagent/graphicsDisplay.py	/^def add(x, y):$/;"	f
+addDiagram	multiagent/multiagentTestClasses.py	/^    def addDiagram(self):$/;"	m	class:GraphGameTreeTest
+addErrorHints	multiagent/grading.py	/^  def addErrorHints(self, exceptionMap, errorInstance, questionNum):$/;"	m	class:Grades
+addExceptionMessage	multiagent/grading.py	/^  def addExceptionMessage(self, q, inst, traceback):$/;"	m	class:Grades
+addMessage	multiagent/grading.py	/^  def addMessage(self, message, raw=False):$/;"	m	class:Grades
+addMessage	multiagent/testClasses.py	/^    def addMessage(self, message):$/;"	m	class:TestCase
+addMessageToEmail	multiagent/grading.py	/^  def addMessageToEmail(self, message):$/;"	m	class:Grades
+addPoints	multiagent/grading.py	/^  def addPoints(self, amt):$/;"	m	class:Grades
+addPrereq	multiagent/grading.py	/^  def addPrereq(self, question, prereq):$/;"	m	class:Grades
+addTestCase	multiagent/testClasses.py	/^    def addTestCase(self, testCase, thunk):$/;"	m	class:Question
+agentCrash	multiagent/pacman.py	/^    def agentCrash(self, game, agentIndex):$/;"	m	class:ClassicGameRules
+animatePacman	multiagent/graphicsDisplay.py	/^    def animatePacman(self, pacman, prevPacman, image):$/;"	m	class:PacmanGraphics
+applyAction	multiagent/pacman.py	/^    applyAction = staticmethod( applyAction )$/;"	v	class:GhostRules
+applyAction	multiagent/pacman.py	/^    applyAction = staticmethod( applyAction )$/;"	v	class:PacmanRules
+applyAction	multiagent/pacman.py	/^    def applyAction( state, action ):$/;"	m	class:PacmanRules
+applyAction	multiagent/pacman.py	/^    def applyAction( state, action, ghostIndex):$/;"	m	class:GhostRules
+argMax	multiagent/util.py	/^    def argMax(self):$/;"	m	class:Counter
+args	multiagent/pacman.py	/^    args = readCommand( sys.argv[1:] ) # Get game components based on input$/;"	v
+arrayInvert	multiagent/util.py	/^def arrayInvert(array):$/;"	f
+asList	multiagent/game.py	/^    def asList(self, key = True):$/;"	m	class:Grid
+assignFullCredit	multiagent/grading.py	/^  def assignFullCredit(self, message="", raw=False):$/;"	m	class:Grades
+assignZeroCredit	multiagent/grading.py	/^  def assignZeroCredit(self):$/;"	m	class:Grades
+begin_graphics	multiagent/graphicsUtils.py	/^def begin_graphics(width=640, height=480, color=formatColor(0, 0, 0), title=None):$/;"	f
+better	multiagent/multiAgents.py	/^better = betterEvaluationFunction$/;"	v
+betterEvaluationFunction	multiagent/multiAgents.py	/^def betterEvaluationFunction(currentGameState):$/;"	f
+canKill	multiagent/pacman.py	/^    canKill = staticmethod( canKill )$/;"	v	class:GhostRules
+canKill	multiagent/pacman.py	/^    def canKill( pacmanPosition, ghostPosition ):$/;"	m	class:GhostRules
+changeColor	multiagent/graphicsUtils.py	/^def changeColor(id, newColor):$/;"	f
+changeText	multiagent/graphicsUtils.py	/^def changeText(id, newText, font=None, size=12, style='normal'):$/;"	f
+checkDeath	multiagent/pacman.py	/^    checkDeath = staticmethod( checkDeath )$/;"	v	class:GhostRules
+checkDeath	multiagent/pacman.py	/^    def checkDeath( state, agentIndex):$/;"	m	class:GhostRules
+checkFailure	multiagent/multiagentTestClasses.py	/^    def checkFailure(self):$/;"	m	class:GradingAgent
+checkNullDisplay	multiagent/graphicsDisplay.py	/^    def checkNullDisplay(self):$/;"	m	class:PacmanGraphics
+checkNullDisplay	multiagent/textDisplay.py	/^    def checkNullDisplay(self):$/;"	m	class:NullGraphics
+chooseFromDistribution	multiagent/util.py	/^def chooseFromDistribution( distribution ):$/;"	f
+circle	multiagent/graphicsUtils.py	/^def circle(pos, r, outlineColor, fillColor, endpoints=None, style='pieslice', width=2):$/;"	f
+clearExpandedCells	multiagent/graphicsDisplay.py	/^    def clearExpandedCells(self):$/;"	m	class:PacmanGraphics
+clearIcon	multiagent/graphicsDisplay.py	/^    def clearIcon(self):$/;"	m	class:InfoPane
+clearMessage	multiagent/graphicsDisplay.py	/^    def clearMessage(self):$/;"	m	class:InfoPane
+clear_screen	multiagent/graphicsUtils.py	/^def clear_screen(background=None):$/;"	f
+codePaths	multiagent/autograder.py	/^    codePaths = options.studentCode.split(',')$/;"	v
+collide	multiagent/pacman.py	/^    collide = staticmethod( collide )$/;"	v	class:GhostRules
+collide	multiagent/pacman.py	/^    def collide( state, ghostState, agentIndex):$/;"	m	class:GhostRules
+colorToVector	multiagent/graphicsUtils.py	/^def colorToVector(color):$/;"	f
+confirmGenerate	multiagent/autograder.py	/^def confirmGenerate():$/;"	f
+construct_our_pacs	multiagent/multiagentTestClasses.py	/^    def construct_our_pacs(self, multiAgents, keyword_dict):$/;"	m	class:PolyAgent
+consume	multiagent/pacman.py	/^    consume = staticmethod( consume )$/;"	v	class:PacmanRules
+consume	multiagent/pacman.py	/^    def consume( position, state ):$/;"	m	class:PacmanRules
+copy	multiagent/game.py	/^    def copy( self ):$/;"	m	class:AgentState
+copy	multiagent/game.py	/^    def copy(self):$/;"	m	class:Grid
+copy	multiagent/util.py	/^    def copy(self):$/;"	m	class:Counter
+copyAgentStates	multiagent/game.py	/^    def copyAgentStates( self, agentStates ):$/;"	m	class:GameStateData
+count	multiagent/game.py	/^    def count(self, item =True ):$/;"	m	class:Grid
+curr_dir	batch_grader.py	/^curr_dir = os.getcwd()$/;"	v
+decrementTimer	multiagent/pacman.py	/^    decrementTimer = staticmethod( decrementTimer )$/;"	v	class:GhostRules
+decrementTimer	multiagent/pacman.py	/^    def decrementTimer( ghostState):$/;"	m	class:GhostRules
+deductPoints	multiagent/grading.py	/^  def deductPoints(self, amt):$/;"	m	class:Grades
+deepCopy	multiagent/game.py	/^    def deepCopy( self ):$/;"	m	class:GameStateData
+deepCopy	multiagent/game.py	/^    def deepCopy(self):$/;"	m	class:Grid
+deepCopy	multiagent/layout.py	/^    def deepCopy(self):$/;"	m	class:Layout
+deepCopy	multiagent/pacman.py	/^    def deepCopy( self ):$/;"	m	class:GameState
+default	multiagent/pacman.py	/^def default(str):$/;"	f
+directionToVector	multiagent/game.py	/^    def directionToVector(direction, speed = 1.0):$/;"	m	class:Actions
+directionToVector	multiagent/game.py	/^    directionToVector = staticmethod(directionToVector)$/;"	v	class:Actions
+divideAll	multiagent/util.py	/^    def divideAll(self, divisor):$/;"	m	class:Counter
+draw	multiagent/textDisplay.py	/^    def draw(self, state):$/;"	m	class:NullGraphics
+draw	multiagent/textDisplay.py	/^    def draw(self, state):$/;"	m	class:PacmanGraphics
+drawAgentObjects	multiagent/graphicsDisplay.py	/^    def drawAgentObjects(self, state):$/;"	m	class:PacmanGraphics
+drawCapsules	multiagent/graphicsDisplay.py	/^    def drawCapsules(self, capsules ):$/;"	m	class:PacmanGraphics
+drawDistributions	multiagent/graphicsDisplay.py	/^    def drawDistributions(self, state):$/;"	m	class:PacmanGraphics
+drawExpandedCells	multiagent/graphicsDisplay.py	/^    def drawExpandedCells(self, cells):$/;"	m	class:PacmanGraphics
+drawFood	multiagent/graphicsDisplay.py	/^    def drawFood(self, foodMatrix ):$/;"	m	class:PacmanGraphics
+drawGhost	multiagent/graphicsDisplay.py	/^    def drawGhost(self):$/;"	m	class:InfoPane
+drawGhost	multiagent/graphicsDisplay.py	/^    def drawGhost(self, ghost, agentIndex):$/;"	m	class:PacmanGraphics
+drawPacman	multiagent/graphicsDisplay.py	/^    def drawPacman(self):$/;"	m	class:InfoPane
+drawPacman	multiagent/graphicsDisplay.py	/^    def drawPacman(self, pacman, index):$/;"	m	class:PacmanGraphics
+drawPane	multiagent/graphicsDisplay.py	/^    def drawPane(self):$/;"	m	class:InfoPane
+drawStaticObjects	multiagent/graphicsDisplay.py	/^    def drawStaticObjects(self, state):$/;"	m	class:PacmanGraphics
+drawWalls	multiagent/graphicsDisplay.py	/^    def drawWalls(self, wallMatrix):$/;"	m	class:PacmanGraphics
+drawWarning	multiagent/graphicsDisplay.py	/^    def drawWarning(self):$/;"	m	class:InfoPane
+draw_background	multiagent/graphicsUtils.py	/^def draw_background():$/;"	f
+edit	multiagent/graphicsUtils.py	/^def edit(id, *args):$/;"	f
+emitTestDict	multiagent/testParser.py	/^def emitTestDict(testDict, handle):$/;"	f
+end_graphics	multiagent/graphicsUtils.py	/^def end_graphics():$/;"	f
+evaluate	multiagent/autograder.py	/^def evaluate(generateSolutions, testRoot, moduleDict, exceptionMap=ERROR_HINT_MAP, edxOutput=False, muteOutput=False,$/;"	f
+evaluationFunction	multiagent/multiAgents.py	/^    def evaluationFunction(self, currentGameState, action):$/;"	m	class:ReflexAgent
+execute	multiagent/multiagentTestClasses.py	/^    def execute(self, grades, moduleDict, solutionDict):$/;"	m	class:EvalAgentTest
+execute	multiagent/multiagentTestClasses.py	/^    def execute(self, grades, moduleDict, solutionDict):$/;"	m	class:GraphGameTreeTest
+execute	multiagent/multiagentTestClasses.py	/^    def execute(self, grades, moduleDict, solutionDict):$/;"	m	class:PacmanGameTreeTest
+execute	multiagent/testClasses.py	/^    def execute(self, grades):$/;"	m	class:HackedPartialCreditQuestion
+execute	multiagent/testClasses.py	/^    def execute(self, grades):$/;"	m	class:NumberPassedQuestion
+execute	multiagent/testClasses.py	/^    def execute(self, grades):$/;"	m	class:PartialCreditQuestion
+execute	multiagent/testClasses.py	/^    def execute(self, grades):$/;"	m	class:PassAllTestsQuestion
+execute	multiagent/testClasses.py	/^    def execute(self, grades):$/;"	m	class:Q6PartialCreditQuestion
+execute	multiagent/testClasses.py	/^    def execute(self, grades):$/;"	m	class:Question
+execute	multiagent/testClasses.py	/^    def execute(self, grades, moduleDict, solutionDict):$/;"	m	class:TestCase
+explored	multiagent/pacman.py	/^    explored = set()$/;"	v	class:GameState
+fail	multiagent/grading.py	/^  def fail(self, message, raw=False):$/;"	m	class:Grades
+finish	multiagent/graphicsDisplay.py	/^    def finish(self):$/;"	m	class:PacmanGraphics
+finish	multiagent/textDisplay.py	/^    def finish(self):$/;"	m	class:NullGraphics
+finish	multiagent/textDisplay.py	/^    def finish(self):$/;"	m	class:PacmanGraphics
+flipCoin	multiagent/util.py	/^def flipCoin( p ):$/;"	f
+formatColor	multiagent/graphicsUtils.py	/^def formatColor(r, g, b):$/;"	f
+g	multiagent/graphicsUtils.py	/^    g = polygon(ghost_shape, formatColor(1, 1, 1))$/;"	v
+generatePacmanSuccessor	multiagent/pacman.py	/^    def generatePacmanSuccessor( self, action ):$/;"	m	class:GameState
+generateSuccessor	multiagent/game.py	/^    def generateSuccessor(self, vector):$/;"	m	class:Configuration
+generateSuccessor	multiagent/multiagentTestClasses.py	/^    def generateSuccessor(self, agentIndex, action):$/;"	m	class:MultiagentTreeState
+generateSuccessor	multiagent/pacman.py	/^    def generateSuccessor( self, agentIndex, action):$/;"	m	class:GameState
+getAction	multiagent/game.py	/^    def getAction(self, state):$/;"	m	class:Agent
+getAction	multiagent/ghostAgents.py	/^    def getAction( self, state ):$/;"	m	class:GhostAgent
+getAction	multiagent/keyboardAgents.py	/^    def getAction( self, state):$/;"	m	class:KeyboardAgent
+getAction	multiagent/multiAgents.py	/^    def getAction(self, gameState):$/;"	m	class:AlphaBetaAgent
+getAction	multiagent/multiAgents.py	/^    def getAction(self, gameState):$/;"	m	class:ExpectimaxAgent
+getAction	multiagent/multiAgents.py	/^    def getAction(self, gameState):$/;"	m	class:MinimaxAgent
+getAction	multiagent/multiAgents.py	/^    def getAction(self, gameState):$/;"	m	class:ReflexAgent
+getAction	multiagent/multiagentTestClasses.py	/^    def getAction(self, state):$/;"	m	class:GradingAgent
+getAction	multiagent/multiagentTestClasses.py	/^    def getAction(self, state):$/;"	m	class:PolyAgent
+getAction	multiagent/pacmanAgents.py	/^    def getAction(self, state):$/;"	m	class:GreedyAgent
+getAction	multiagent/pacmanAgents.py	/^    def getAction(self, state):$/;"	m	class:LeftTurnAgent
+getAndResetExplored	multiagent/pacman.py	/^    def getAndResetExplored():$/;"	m	class:GameState
+getAndResetExplored	multiagent/pacman.py	/^    getAndResetExplored = staticmethod(getAndResetExplored)$/;"	v	class:GameState
+getCapsules	multiagent/pacman.py	/^    def getCapsules(self):$/;"	m	class:GameState
+getDepends	multiagent/autograder.py	/^def getDepends(testParser, testRoot, question):$/;"	f
+getDirection	multiagent/game.py	/^    def getDirection(self):$/;"	m	class:AgentState
+getDirection	multiagent/game.py	/^    def getDirection(self):$/;"	m	class:Configuration
+getDirection	multiagent/graphicsDisplay.py	/^    def getDirection(self, agentState):$/;"	m	class:PacmanGraphics
+getDisplay	multiagent/autograder.py	/^def getDisplay(graphicsByDefault, options=None):$/;"	f
+getDisplay	multiagent/testClasses.py	/^    def getDisplay(self):$/;"	m	class:Question
+getDistribution	multiagent/ghostAgents.py	/^    def getDistribution( self, state ):$/;"	m	class:DirectionalGhost
+getDistribution	multiagent/ghostAgents.py	/^    def getDistribution( self, state ):$/;"	m	class:RandomGhost
+getDistribution	multiagent/ghostAgents.py	/^    def getDistribution(self, state):$/;"	m	class:GhostAgent
+getEndpoints	multiagent/graphicsDisplay.py	/^    def getEndpoints(self, direction, position=(0,0)):$/;"	m	class:PacmanGraphics
+getFood	multiagent/pacman.py	/^    def getFood(self):$/;"	m	class:GameState
+getFurthestCorner	multiagent/layout.py	/^    def getFurthestCorner(self, pacPos):$/;"	m	class:Layout
+getGhostColor	multiagent/graphicsDisplay.py	/^    def getGhostColor(self, ghost, ghostIndex):$/;"	m	class:FirstPersonPacmanGraphics
+getGhostColor	multiagent/graphicsDisplay.py	/^    def getGhostColor(self, ghost, ghostIndex):$/;"	m	class:PacmanGraphics
+getGhostPosition	multiagent/pacman.py	/^    def getGhostPosition( self, agentIndex ):$/;"	m	class:GameState
+getGhostPositions	multiagent/pacman.py	/^    def getGhostPositions(self):$/;"	m	class:GameState
+getGhostState	multiagent/pacman.py	/^    def getGhostState( self, agentIndex ):$/;"	m	class:GameState
+getGhostStates	multiagent/pacman.py	/^    def getGhostStates( self ):$/;"	m	class:GameState
+getLayout	multiagent/layout.py	/^def getLayout(name, back = 2):$/;"	f
+getLegalActions	multiagent/multiagentTestClasses.py	/^    def getLegalActions(self, agentIndex=0):$/;"	m	class:MultiagentTreeState
+getLegalActions	multiagent/pacman.py	/^    def getLegalActions( self, agentIndex=0 ):$/;"	m	class:GameState
+getLegalActions	multiagent/pacman.py	/^    def getLegalActions( state ):$/;"	m	class:PacmanRules
+getLegalActions	multiagent/pacman.py	/^    def getLegalActions( state, ghostIndex ):$/;"	m	class:GhostRules
+getLegalActions	multiagent/pacman.py	/^    getLegalActions = staticmethod( getLegalActions )$/;"	v	class:GhostRules
+getLegalActions	multiagent/pacman.py	/^    getLegalActions = staticmethod( getLegalActions )$/;"	v	class:PacmanRules
+getLegalNeighbors	multiagent/game.py	/^    def getLegalNeighbors(position, walls):$/;"	m	class:Actions
+getLegalNeighbors	multiagent/game.py	/^    getLegalNeighbors = staticmethod(getLegalNeighbors)$/;"	v	class:Actions
+getLegalPacmanActions	multiagent/pacman.py	/^    def getLegalPacmanActions( self ):$/;"	m	class:GameState
+getMaxPoints	multiagent/testClasses.py	/^    def getMaxPoints(self):$/;"	m	class:Question
+getMaxStartupTime	multiagent/pacman.py	/^    def getMaxStartupTime(self, agentIndex):$/;"	m	class:ClassicGameRules
+getMaxTimeWarnings	multiagent/pacman.py	/^    def getMaxTimeWarnings(self, agentIndex):$/;"	m	class:ClassicGameRules
+getMaxTotalTime	multiagent/pacman.py	/^    def getMaxTotalTime(self, agentIndex):$/;"	m	class:ClassicGameRules
+getMove	multiagent/keyboardAgents.py	/^    def getMove(self, legal):$/;"	m	class:KeyboardAgent
+getMove	multiagent/keyboardAgents.py	/^    def getMove(self, legal):$/;"	m	class:KeyboardAgent2
+getMoveTimeout	multiagent/pacman.py	/^    def getMoveTimeout(self, agentIndex):$/;"	m	class:ClassicGameRules
+getMoveWarningTime	multiagent/pacman.py	/^    def getMoveWarningTime(self, agentIndex):$/;"	m	class:ClassicGameRules
+getNumAgents	multiagent/multiagentTestClasses.py	/^    def getNumAgents(self):$/;"	m	class:MultiagentTreeState
+getNumAgents	multiagent/pacman.py	/^    def getNumAgents( self ):$/;"	m	class:GameState
+getNumFood	multiagent/pacman.py	/^    def getNumFood( self ):$/;"	m	class:GameState
+getNumGhosts	multiagent/layout.py	/^    def getNumGhosts(self):$/;"	m	class:Layout
+getPacmanPosition	multiagent/pacman.py	/^    def getPacmanPosition( self ):$/;"	m	class:GameState
+getPacmanState	multiagent/pacman.py	/^    def getPacmanState( self ):$/;"	m	class:GameState
+getPath	multiagent/testClasses.py	/^    def getPath(self):$/;"	m	class:TestCase
+getPosition	multiagent/game.py	/^    def getPosition(self):$/;"	m	class:AgentState
+getPosition	multiagent/game.py	/^    def getPosition(self):$/;"	m	class:Configuration
+getPosition	multiagent/graphicsDisplay.py	/^    def getPosition(self, agentState):$/;"	m	class:PacmanGraphics
+getPosition	multiagent/graphicsDisplay.py	/^    def getPosition(self, ghostState):$/;"	m	class:FirstPersonPacmanGraphics
+getPossibleActions	multiagent/game.py	/^    def getPossibleActions(config, walls):$/;"	m	class:Actions
+getPossibleActions	multiagent/game.py	/^    getPossibleActions = staticmethod(getPossibleActions)$/;"	v	class:Actions
+getProbability	multiagent/util.py	/^def getProbability(value, distribution, values):$/;"	f
+getProgress	multiagent/game.py	/^    def getProgress(self):$/;"	m	class:Game
+getProgress	multiagent/pacman.py	/^    def getProgress(self, game):$/;"	m	class:ClassicGameRules
+getRandomCorner	multiagent/layout.py	/^    def getRandomCorner(self):$/;"	m	class:Layout
+getRandomLegalPosition	multiagent/layout.py	/^    def getRandomLegalPosition(self):$/;"	m	class:Layout
+getScore	multiagent/multiagentTestClasses.py	/^    def getScore(self):$/;"	m	class:MultiagentTreeState
+getScore	multiagent/pacman.py	/^    def getScore( self ):$/;"	m	class:GameState
+getSuboptimalMoves	multiagent/multiagentTestClasses.py	/^    def getSuboptimalMoves(self):$/;"	m	class:GradingAgent
+getSuccessor	multiagent/game.py	/^    def getSuccessor(position, action):$/;"	m	class:Actions
+getSuccessor	multiagent/game.py	/^    getSuccessor = staticmethod(getSuccessor)$/;"	v	class:Actions
+getTestSubdirs	multiagent/autograder.py	/^def getTestSubdirs(testParser, testRoot, questionToGrade):$/;"	f
+getTraces	multiagent/multiagentTestClasses.py	/^    def getTraces(self):$/;"	m	class:PolyAgent
+getWalls	multiagent/pacman.py	/^    def getWalls(self):$/;"	m	class:GameState
+getWrongStatesExplored	multiagent/multiagentTestClasses.py	/^    def getWrongStatesExplored(self):$/;"	m	class:GradingAgent
+ghost_shape	multiagent/graphicsUtils.py	/^    ghost_shape = [(x * 10 + 20, y * 10 + 20) for x, y in ghost_shape]$/;"	v
+ghost_shape	multiagent/graphicsUtils.py	/^ghost_shape = [$/;"	v
+grade	multiagent/grading.py	/^  def grade(self, gradingModule, exceptionMap = {}, bonusPic = False):$/;"	m	class:Grades
+gradeThreshold	multiagent/multiagentTestClasses.py	/^        def gradeThreshold(value, minimum, thresholds, name):$/;"	f	function:EvalAgentTest.execute
+handle_timeout	multiagent/util.py	/^    def handle_timeout(self, signum, frame):$/;"	m	class:TimeoutFunction
+hasFood	multiagent/pacman.py	/^    def hasFood(self, x, y):$/;"	m	class:GameState
+hasWall	multiagent/pacman.py	/^    def hasWall(self, x, y):$/;"	m	class:GameState
+image	multiagent/graphicsUtils.py	/^def image(pos, file="..\/..\/blueghost.gif"):$/;"	f
+incrementAll	multiagent/util.py	/^    def incrementAll(self, keys, count):$/;"	m	class:Counter
+initialize	multiagent/game.py	/^    def initialize( self, layout, numGhostAgents ):$/;"	m	class:GameStateData
+initialize	multiagent/graphicsDisplay.py	/^    def initialize(self, state, isBlue = False):$/;"	m	class:FirstPersonPacmanGraphics
+initialize	multiagent/graphicsDisplay.py	/^    def initialize(self, state, isBlue = False):$/;"	m	class:PacmanGraphics
+initialize	multiagent/pacman.py	/^    def initialize( self, layout, numGhostAgents=1000 ):$/;"	m	class:GameState
+initialize	multiagent/textDisplay.py	/^    def initialize(self, state, isBlue = False):$/;"	m	class:NullGraphics
+initialize	multiagent/textDisplay.py	/^    def initialize(self, state, isBlue = False):$/;"	m	class:PacmanGraphics
+initializeGhostDistances	multiagent/graphicsDisplay.py	/^    def initializeGhostDistances(self, distances):$/;"	m	class:InfoPane
+initializeVisibilityMatrix	multiagent/layout.py	/^    def initializeVisibilityMatrix(self):$/;"	m	class:Layout
+isEmpty	multiagent/util.py	/^    def isEmpty(self):$/;"	m	class:PriorityQueue
+isEmpty	multiagent/util.py	/^    def isEmpty(self):$/;"	m	class:Queue
+isEmpty	multiagent/util.py	/^    def isEmpty(self):$/;"	m	class:Stack
+isInteger	multiagent/game.py	/^    def isInteger(self):$/;"	m	class:Configuration
+isLose	multiagent/multiagentTestClasses.py	/^    def isLose(self):$/;"	m	class:MultiagentTreeState
+isLose	multiagent/pacman.py	/^    def isLose( self ):$/;"	m	class:GameState
+isVisibleFrom	multiagent/layout.py	/^    def isVisibleFrom(self, ghostPos, pacPos, pacDirection):$/;"	m	class:Layout
+isWall	multiagent/graphicsDisplay.py	/^    def isWall(self, x, y, walls):$/;"	m	class:PacmanGraphics
+isWall	multiagent/layout.py	/^    def isWall(self, pos):$/;"	m	class:Layout
+isWin	multiagent/multiagentTestClasses.py	/^    def isWin(self):$/;"	m	class:MultiagentTreeState
+isWin	multiagent/pacman.py	/^    def isWin( self ):$/;"	m	class:GameState
+keys_pressed	multiagent/graphicsUtils.py	/^def keys_pressed(d_o_e=Tkinter.tkinter.dooneevent,$/;"	f
+keys_waiting	multiagent/graphicsUtils.py	/^def keys_waiting():$/;"	f
+line	multiagent/graphicsUtils.py	/^def line(here, there, color=formatColor(0, 0, 0), width=2):$/;"	f
+loadAgent	multiagent/pacman.py	/^def loadAgent(pacman, nographics):$/;"	f
+loadModuleFile	multiagent/autograder.py	/^def loadModuleFile(moduleName, filePath):$/;"	f
+loadModuleString	multiagent/autograder.py	/^def loadModuleString(moduleSource):$/;"	f
+lookAhead	multiagent/graphicsDisplay.py	/^    def lookAhead(self, config, state):$/;"	m	class:FirstPersonPacmanGraphics
+lookup	multiagent/util.py	/^def lookup(name, namespace):$/;"	f
+lose	multiagent/pacman.py	/^    def lose( self, state, game ):$/;"	m	class:ClassicGameRules
+main	batch_grader.py	/^def main():$/;"	f
+make_window	multiagent/graphicsDisplay.py	/^    def make_window(self, width, height):$/;"	m	class:PacmanGraphics
+makefun	multiagent/autograder.py	/^            def makefun(testCase, solution_file):$/;"	f	function:evaluate
+makefun	multiagent/autograder.py	/^        def makefun(question):$/;"	f	function:evaluate
+manhattanDistance	multiagent/util.py	/^def manhattanDistance( xy1, xy2 ):$/;"	f
+matrixAsList	multiagent/util.py	/^def matrixAsList( matrix, value = True ):$/;"	f
+moduleDict	multiagent/autograder.py	/^    moduleDict = {}$/;"	v
+moduleName	multiagent/autograder.py	/^        moduleName = re.match('.*?([^\/]*)\\.py', cp).group(1)$/;"	v
+moduleName	multiagent/autograder.py	/^    moduleName = re.match('.*?([^\/]*)\\.py', options.testCaseCode).group(1)$/;"	v
+moveCircle	multiagent/graphicsUtils.py	/^def moveCircle(id, pos, r, endpoints=None):$/;"	f
+moveEyes	multiagent/graphicsDisplay.py	/^    def moveEyes(self, pos, dir, eyes):$/;"	m	class:PacmanGraphics
+moveFilesToTestFolder	batch_grader.py	/^def moveFilesToTestFolder(student_folder, test_files):$/;"	f
+moveGhost	multiagent/graphicsDisplay.py	/^    def moveGhost(self, ghost, ghostIndex, prevGhost, ghostImageParts):$/;"	m	class:PacmanGraphics
+movePacman	multiagent/graphicsDisplay.py	/^    def movePacman(self, position, direction, image):$/;"	m	class:PacmanGraphics
+move_by	multiagent/graphicsUtils.py	/^def move_by(object, x, y=None,$/;"	f
+move_to	multiagent/graphicsUtils.py	/^def move_to(object, x, y=None,$/;"	f
+mute	multiagent/game.py	/^    def mute(self, agentIndex):$/;"	m	class:Game
+mutePrint	multiagent/util.py	/^def mutePrint():$/;"	f
+nSample	multiagent/util.py	/^def nSample(distribution, values, n):$/;"	f
+nearestPoint	multiagent/util.py	/^def nearestPoint( pos ):$/;"	f
+newGame	multiagent/pacman.py	/^    def newGame( self, layout, pacmanAgent, ghostAgents, display, quiet = False, catchExceptions=False):$/;"	m	class:ClassicGameRules
+normalize	multiagent/util.py	/^    def normalize(self):$/;"	m	class:Counter
+normalize	multiagent/util.py	/^def normalize(vectorOrCounter):$/;"	f
+options	multiagent/autograder.py	/^    options = readCommand(sys.argv)$/;"	v
+packBits	multiagent/game.py	/^    def packBits(self):$/;"	m	class:Grid
+parse	multiagent/testParser.py	/^    def parse(self):$/;"	m	class:TestParser
+parseAgentArgs	multiagent/pacman.py	/^def parseAgentArgs(str):$/;"	f
+parseTreeProblem	multiagent/multiagentTestClasses.py	/^def parseTreeProblem(testDict):$/;"	f
+pause	multiagent/textDisplay.py	/^    def pause(self):$/;"	m	class:NullGraphics
+pause	multiagent/textDisplay.py	/^    def pause(self):$/;"	m	class:PacmanGraphics
+pause	multiagent/util.py	/^def pause():$/;"	f
+placeGhost	multiagent/pacman.py	/^    def placeGhost(state, ghostState):$/;"	m	class:GhostRules
+placeGhost	multiagent/pacman.py	/^    placeGhost = staticmethod( placeGhost )$/;"	v	class:GhostRules
+polygon	multiagent/graphicsUtils.py	/^def polygon(coords, outlineColor, fillColor=None, filled=1, smoothed=1, behind=0, width=1):$/;"	f
+pop	multiagent/util.py	/^    def pop(self):$/;"	m	class:PriorityQueue
+pop	multiagent/util.py	/^    def pop(self):$/;"	m	class:Queue
+pop	multiagent/util.py	/^    def pop(self):$/;"	m	class:Stack
+pp	multiagent/multiagentTestClasses.py	/^pp = PrettyPrinter()$/;"	v
+printTest	multiagent/autograder.py	/^def printTest(testDict, solutionDict):$/;"	f
+process	multiagent/pacman.py	/^    def process(self, state, game):$/;"	m	class:ClassicGameRules
+processLayoutChar	multiagent/layout.py	/^    def processLayoutChar(self, x, y, layoutChar):$/;"	m	class:Layout
+processLayoutText	multiagent/layout.py	/^    def processLayoutText(self, layoutText):$/;"	m	class:Layout
+produceOutput	multiagent/grading.py	/^  def produceOutput(self):$/;"	m	class:Grades
+push	multiagent/util.py	/^    def push(self, item):$/;"	m	class:PriorityQueueWithFunction
+push	multiagent/util.py	/^    def push(self, item, priority):$/;"	m	class:PriorityQueue
+push	multiagent/util.py	/^    def push(self,item):$/;"	m	class:Queue
+push	multiagent/util.py	/^    def push(self,item):$/;"	m	class:Stack
+raiseNotDefined	multiagent/testClasses.py	/^    def raiseNotDefined(self):$/;"	m	class:Question
+raiseNotDefined	multiagent/testClasses.py	/^    def raiseNotDefined(self):$/;"	m	class:TestCase
+raiseNotDefined	multiagent/util.py	/^def raiseNotDefined():$/;"	f
+readCommand	multiagent/autograder.py	/^def readCommand(argv):$/;"	f
+readCommand	multiagent/pacman.py	/^def readCommand( argv ):$/;"	f
+readFile	multiagent/autograder.py	/^def readFile(path, root=""):$/;"	f
+reconstituteGrid	multiagent/game.py	/^def reconstituteGrid(bitRep):$/;"	f
+refresh	multiagent/graphicsUtils.py	/^def refresh():$/;"	f
+registerInitialState	multiagent/multiagentTestClasses.py	/^    def registerInitialState(self, state):$/;"	m	class:GradingAgent
+registerInitialState	multiagent/multiagentTestClasses.py	/^    def registerInitialState(self, state):$/;"	m	class:PolyAgent
+remap_arrows	multiagent/graphicsUtils.py	/^def remap_arrows(event):$/;"	f
+removeCapsule	multiagent/graphicsDisplay.py	/^    def removeCapsule(self, cell, capsuleImages ):$/;"	m	class:PacmanGraphics
+removeComments	multiagent/testParser.py	/^    def removeComments(self, rawlines):$/;"	m	class:TestParser
+removeFood	multiagent/graphicsDisplay.py	/^    def removeFood(self, cell, foodImages ):$/;"	m	class:PacmanGraphics
+remove_from_screen	multiagent/graphicsUtils.py	/^def remove_from_screen(x,$/;"	f
+replayGame	multiagent/pacman.py	/^def replayGame( layout, actions, display ):$/;"	f
+reset	multiagent/multiagentTestClasses.py	/^    def reset(self):$/;"	m	class:MultiagentTreeProblem
+reverseDirection	multiagent/game.py	/^    def reverseDirection(action):$/;"	m	class:Actions
+reverseDirection	multiagent/game.py	/^    reverseDirection = staticmethod(reverseDirection)$/;"	v	class:Actions
+run	multiagent/game.py	/^    def run( self ):$/;"	m	class:Game
+run	multiagent/multiagentTestClasses.py	/^def run(lay, layName, pac, ghosts, disp, nGames=1, name='games'):$/;"	f
+runAutograder	batch_grader.py	/^def runAutograder():$/;"	f
+runGames	multiagent/pacman.py	/^def runGames( layout, pacman, ghosts, display, numGames, record, numTraining = 0, catchExceptions=False, timeout=30 ):$/;"	f
+runTest	multiagent/autograder.py	/^def runTest(testName, moduleDict, printTestCase=False, display=None):$/;"	f
+sample	multiagent/util.py	/^def sample(distribution, values = None):$/;"	f
+sampleFromCounter	multiagent/util.py	/^def sampleFromCounter(ctr):$/;"	f
+saveFrame	multiagent/graphicsDisplay.py	/^def saveFrame():$/;"	f
+scoreEvaluation	multiagent/pacmanAgents.py	/^def scoreEvaluation(state):$/;"	f
+scoreEvaluationFunction	multiagent/multiAgents.py	/^def scoreEvaluationFunction(currentGameState):$/;"	f
+select	multiagent/multiagentTestClasses.py	/^    def select(self, list, indices):$/;"	m	class:PolyAgent
+setModuleName	multiagent/autograder.py	/^def setModuleName(module, filename):$/;"	f
+setTeam	multiagent/graphicsDisplay.py	/^    def setTeam(self, isBlue):$/;"	m	class:InfoPane
+shallowCopy	multiagent/game.py	/^    def shallowCopy(self):$/;"	m	class:Grid
+sign	multiagent/util.py	/^def sign( x ):$/;"	f
+sleep	multiagent/graphicsUtils.py	/^def sleep(secs):$/;"	f
+solveProblem	multiagent/multiagentTestClasses.py	/^    def solveProblem(self, multiAgents):$/;"	m	class:GraphGameTreeTest
+sortedKeys	multiagent/util.py	/^    def sortedKeys(self):$/;"	m	class:Counter
+splitStrings	multiagent/autograder.py	/^def splitStrings(d):$/;"	f
+square	multiagent/graphicsUtils.py	/^def square(pos, r, color, filled=1, behind=0):$/;"	f
+startGraphics	multiagent/graphicsDisplay.py	/^    def startGraphics(self, state):$/;"	m	class:PacmanGraphics
+swapImages	multiagent/graphicsDisplay.py	/^    def swapImages(self, agentIndex, newState):$/;"	m	class:PacmanGraphics
+testFail	multiagent/testClasses.py	/^    def testFail(self, grades):$/;"	m	class:TestCase
+testPartial	multiagent/testClasses.py	/^    def testPartial(self, grades, points, maxPoints):$/;"	m	class:TestCase
+testPass	multiagent/testClasses.py	/^    def testPass(self, grades):$/;"	m	class:TestCase
+text	multiagent/graphicsUtils.py	/^def text(pos, color, contents, font='Helvetica', size=12, style='normal', anchor="nw"):$/;"	f
+toScreen	multiagent/graphicsDisplay.py	/^    def toScreen(self, pos, y = None):$/;"	m	class:InfoPane
+to_screen	multiagent/graphicsDisplay.py	/^    def to_screen(self, point):$/;"	m	class:PacmanGraphics
+to_screen2	multiagent/graphicsDisplay.py	/^    def to_screen2(self, point):$/;"	m	class:PacmanGraphics
+totalCount	multiagent/grading.py	/^  def totalCount(self):$/;"	m	class:Counter
+totalCount	multiagent/util.py	/^    def totalCount(self):$/;"	m	class:Counter
+tryToLoad	multiagent/layout.py	/^def tryToLoad(fullname):$/;"	f
+unmute	multiagent/game.py	/^    def unmute(self):$/;"	m	class:Game
+unmutePrint	multiagent/util.py	/^def unmutePrint():$/;"	f
+unzip_original_submissions	batch_grader.py	/^def unzip_original_submissions():$/;"	f
+update	multiagent/graphicsDisplay.py	/^    def update(self, newState):$/;"	m	class:PacmanGraphics
+update	multiagent/textDisplay.py	/^    def update(self, state):$/;"	m	class:NullGraphics
+update	multiagent/textDisplay.py	/^    def update(self, state):$/;"	m	class:PacmanGraphics
+updateDistributions	multiagent/graphicsDisplay.py	/^    def updateDistributions(self, distributions):$/;"	m	class:PacmanGraphics
+updateDistributions	multiagent/textDisplay.py	/^    def updateDistributions(self, dist):$/;"	m	class:NullGraphics
+updateGhostDistances	multiagent/graphicsDisplay.py	/^    def updateGhostDistances(self, distances):$/;"	m	class:InfoPane
+updateMessage	multiagent/graphicsDisplay.py	/^    def updateMessage(self, message):$/;"	m	class:InfoPane
+updateScore	multiagent/graphicsDisplay.py	/^    def updateScore(self, score):$/;"	m	class:InfoPane
+vectorToDirection	multiagent/game.py	/^    def vectorToDirection(vector):$/;"	m	class:Actions
+vectorToDirection	multiagent/game.py	/^    vectorToDirection = staticmethod(vectorToDirection)$/;"	v	class:Actions
+wait_for_click	multiagent/graphicsUtils.py	/^def wait_for_click():$/;"	f
+wait_for_keys	multiagent/graphicsUtils.py	/^def wait_for_keys():$/;"	f
+win	multiagent/pacman.py	/^    def win( self, state, game ):$/;"	m	class:ClassicGameRules
+write	multiagent/util.py	/^    def write(self, string):$/;"	m	class:WritableNull
+writeList	multiagent/multiagentTestClasses.py	/^    def writeList(self, handle, name, list):$/;"	m	class:PacmanGameTreeTest
+writePostscript	multiagent/graphicsUtils.py	/^def writePostscript(filename):$/;"	f
+writeSolution	multiagent/multiagentTestClasses.py	/^    def writeSolution(self, moduleDict, filePath):$/;"	m	class:EvalAgentTest
+writeSolution	multiagent/multiagentTestClasses.py	/^    def writeSolution(self, moduleDict, filePath):$/;"	m	class:GraphGameTreeTest
+writeSolution	multiagent/multiagentTestClasses.py	/^    def writeSolution(self, moduleDict, filePath):$/;"	m	class:PacmanGameTreeTest
+writeSolution	multiagent/testClasses.py	/^    def writeSolution(self, moduleDict, filePath):$/;"	m	class:TestCase

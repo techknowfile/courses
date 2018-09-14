@@ -1,0 +1,7 @@
+TYPE
+    x, y, z: INT;
+    g, h, j: i;
+{
+    a = a + y;
+}
+

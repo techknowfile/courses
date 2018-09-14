@@ -1,0 +1,171 @@
+plotUtil.plotRegression: Sorry, could not import matplotlib
+Extracting MNIST_data/train-images-idx3-ubyte.gz
+Extracting MNIST_data/train-labels-idx1-ubyte.gz
+Extracting MNIST_data/t10k-images-idx3-ubyte.gz
+Extracting MNIST_data/t10k-labels-idx1-ubyte.gz
+Starting on 11-27 at 20:06:26
+
+Question q1
+===========
+
+*** FAIL: Terminated with a string exception.
+
+### Question q1: 0/4 ###
+
+
+Question q2
+===========
+
+*** FAIL: test_cases/q2/grade.test
+***     Solution is not correct.
+***     Student solution: None
+*** Tests failed.
+
+### Question q2: 0/1 ###
+
+
+Question q3
+===========
+
+*** FAIL: test_cases/q3/grade.test
+***     Solution is not correct.
+***     Student solution: None
+*** Tests failed.
+
+### Question q3: 0/1 ###
+
+
+Question q4
+===========
+
+*** PASS: test_cases/q4/learning_rate0.1.test (2 of 2 points)
+*** PASS: test_cases/q4/learning_rate1.test (2 of 2 points)
+
+### Question q4: 2/2 ###
+
+
+Question q5
+===========
+
+*** PASS: test_cases/q5/learning_rate0.1-momentum0.0.test (1 of 1 points)
+*** PASS: test_cases/q5/learning_rate0.1-momentum0.0-update_iterations1.test (1 of 1 points)
+*** PASS: test_cases/q5/learning_rate0.1-momentum0.9.test (1 of 1 points)
+*** PASS: test_cases/q5/learning_rate0.1-momentum0.9-update_iterations1.test (1 of 1 points)
+*** PASS: test_cases/q5/learning_rate0.1-momentum1.0.test (1 of 1 points)
+*** PASS: test_cases/q5/learning_rate0.1-momentum1.0-update_iterations1.test (1 of 1 points)
+*** PASS: test_cases/q5/learning_rate1-momentum0.0.test (1 of 1 points)
+*** PASS: test_cases/q5/learning_rate1-momentum0.0-update_iterations1.test (1 of 1 points)
+*** PASS: test_cases/q5/learning_rate1-momentum0.9.test (1 of 1 points)
+*** PASS: test_cases/q5/learning_rate1-momentum0.9-update_iterations1.test (1 of 1 points)
+*** PASS: test_cases/q5/learning_rate1-momentum1.0.test (1 of 1 points)
+*** PASS: test_cases/q5/learning_rate1-momentum1.0-update_iterations1.test (1 of 1 points)
+
+### Question q5: 1/1 ###
+
+
+Question q6a
+============
+
+*** FAIL: test_cases/q6a/GD-max_iter1.test
+***     Intermediate losses from solving (with iterations=1, learning_rate=0.001, momentum=0.9) are not equal.
+***     
+***     Student's losses from solving are:
+***     training loss: [2.7415156]
+***     validation loss: [2.7396142]
+***     
+***     Correct losses from solving are:
+***     training loss: [2.741515636444092]
+***     validation loss: [2.7342896461486816]
+***     
+*** FAIL: test_cases/q6a/GD-max_iter10.test
+***     Intermediate losses from solving (with iterations=10, learning_rate=0.001, momentum=0.9) are not equal.
+***     
+***     Student's losses from solving are:
+***     training loss: [2.7415156, 2.7396142, 2.7360129, 2.730911, 2.7244818, 2.7168999, 2.7083087, 2.6988585, 2.688683, 2.6778924]
+***     validation loss: [2.7396142, 2.7360129, 2.730911, 2.7244818, 2.7168999, 2.7083087, 2.6988585, 2.688683, 2.6778924, 2.6665897]
+***     
+***     Correct losses from solving are:
+***     training loss: [2.741515636444092, 2.739614248275757, 2.7360129356384277, 2.7309110164642334, 2.7244818210601807, 2.716899871826172, 2.708308696746826, 2.6988584995269775, 2.688683032989502, 2.6778924465179443]
+***     validation loss: [2.7342896461486816, 2.7306666374206543, 2.7255280017852783, 2.719057321548462, 2.7114200592041016, 2.702775001525879, 2.693260908126831, 2.6830124855041504, 2.6721413135528564, 2.6607565879821777]
+***     
+*** Tests failed.
+
+### Question q6a: 0/2 ###
+
+
+Question q6b
+============
+
+*** PASS: test_cases/q6b/SGD-max_iter1-shuffle0.test (1 of 1 points)
+*** PASS: test_cases/q6b/SGD-max_iter1-shuffle1.test (1 of 1 points)
+*** PASS: test_cases/q6b/SGD-max_iter10-shuffle0.test (1 of 1 points)
+*** PASS: test_cases/q6b/SGD-max_iter10-shuffle1.test (1 of 1 points)
+
+### Question q6b: 1/1 ###
+
+
+Question q6c
+============
+
+*** PASS: test_cases/q6c/minibatchSGD-max_iter1-shuffle0.test (1 of 1 points)
+*** PASS: test_cases/q6c/minibatchSGD-max_iter1-shuffle1.test (1 of 1 points)
+*** PASS: test_cases/q6c/minibatchSGD-max_iter10-shuffle0.test (1 of 1 points)
+*** PASS: test_cases/q6c/minibatchSGD-max_iter10-shuffle1.test (1 of 1 points)
+
+### Question q6c: 1/1 ###
+
+
+Question q7
+===========
+
+*** PASS: test_cases/q7/grade.test
+
+### Question q7: 1/1 ###
+
+
+Question q8
+===========
+
+*** PASS: test_cases/q8/grade-10.test (2 of 2 points)
+
+### Question q8: 2/2 ###
+
+
+Question q9
+===========
+
+*** PASS: test_cases/q9/grade-accuracy.test (4 of 4 points)
+
+### Question q9: 5/5 ###
+
+
+Question q10
+============
+
+*** PASS: test_cases/q10/grade.test (4 of 4 points)
+
+### Question q10: 4/4 ###
+
+
+Finished at 20:07:41
+
+Provisional grades
+==================
+Question q1: 0/4
+Question q2: 0/1
+Question q3: 0/1
+Question q4: 2/2
+Question q5: 1/1
+Question q6a: 0/2
+Question q6b: 1/1
+Question q6c: 1/1
+Question q7: 1/1
+Question q8: 2/2
+Question q9: 5/5
+Question q10: 4/4
+------------------
+Total: 17/25
+
+Your grades are NOT yet registered.  To register your grades, make sure
+to follow your instructor's guidelines to receive credit on your project.
+

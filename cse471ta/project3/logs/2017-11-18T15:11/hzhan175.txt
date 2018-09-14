@@ -1,0 +1,106 @@
+Starting on 11-18 at 15:27:47
+
+Question q1
+===========
+
+*** PASS: test_cases/q1/1-tinygrid.test
+*** PASS: test_cases/q1/2-tinygrid-noisy.test
+*** PASS: test_cases/q1/3-bridge.test
+*** PASS: test_cases/q1/4-discountgrid.test
+
+### Question q1: 6/6 ###
+
+
+Question q2
+===========
+
+*** PASS: test_cases/q2/1-bridge-grid.test
+
+### Question q2: 1/1 ###
+
+
+Question q3
+===========
+
+*** PASS: test_cases/q3/1-question-3.1.test
+*** PASS: test_cases/q3/2-question-3.2.test
+*** PASS: test_cases/q3/3-question-3.3.test
+*** PASS: test_cases/q3/4-question-3.4.test
+*** PASS: test_cases/q3/5-question-3.5.test
+
+### Question q3: 5/5 ###
+
+
+Question q4
+===========
+
+*** PASS: test_cases/q4/1-tinygrid.test
+*** PASS: test_cases/q4/2-tinygrid-noisy.test
+*** PASS: test_cases/q4/3-bridge.test
+*** PASS: test_cases/q4/4-discountgrid.test
+
+### Question q4: 5/5 ###
+
+
+Question q5
+===========
+
+*** PASS: test_cases/q5/1-tinygrid.test
+*** PASS: test_cases/q5/2-tinygrid-noisy.test
+*** PASS: test_cases/q5/3-bridge.test
+*** PASS: test_cases/q5/4-discountgrid.test
+
+### Question q5: 3/3 ###
+
+
+Question q6
+===========
+
+*** PASS: test_cases/q6/grade-agent.test
+
+### Question q6: 1/1 ###
+
+
+Question q7
+===========
+
+*** PASS: test_cases/q7/grade-agent.test (1 of 1 points)
+***     Grading agent using command:  python pacman.py -p PacmanQAgent -x 2000 -n 2100 -l smallGrid -q -f --fixRandomSeed
+***     100 wins (1 of 1 points)
+***         Grading scheme:
+***          < 70:  0 points
+***         >= 70:  1 points
+
+### Question q7: 1/1 ###
+
+
+Question q8
+===========
+
+*** PASS: test_cases/q8/1-tinygrid.test
+*** PASS: test_cases/q8/2-tinygrid-noisy.test
+*** PASS: test_cases/q8/3-bridge.test
+*** PASS: test_cases/q8/4-discountgrid.test
+*** PASS: test_cases/q8/5-coord-extractor.test
+
+### Question q8: 3/3 ###
+
+
+Finished at 15:28:16
+
+Provisional grades
+==================
+Question q1: 6/6
+Question q2: 1/1
+Question q3: 5/5
+Question q4: 5/5
+Question q5: 3/3
+Question q6: 1/1
+Question q7: 1/1
+Question q8: 3/3
+------------------
+Total: 25/25
+
+Your grades are NOT yet registered.  To register your grades, make sure
+to follow your instructor's guidelines to receive credit on your project.
+

@@ -1,0 +1,26 @@
+{
+  x = 4;
+  SWITCH b
+  {
+    CASE 1:
+     {
+       SWITCH x
+       {
+         CASE 1:
+         {
+           a = 1;
+         }
+        }
+     }
+     CASE 2:
+     {
+       SWITCH a
+       {
+         CASE 1:
+         {
+           a = 1.2;
+         }
+        }
+     }
+  }
+}

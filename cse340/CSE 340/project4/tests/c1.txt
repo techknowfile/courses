@@ -1,0 +1,13 @@
+TYPE
+   a : INT;
+   b : a;
+   c : b;
+   j : k;
+VAR
+   x : a;
+   y : b;
+   z : c;
+{
+  z = 10;
+}
+

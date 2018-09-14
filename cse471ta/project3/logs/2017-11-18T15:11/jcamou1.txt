@@ -1,0 +1,160 @@
+Starting on 11-18 at 15:29:29
+
+Question q1
+===========
+
+*** PASS: test_cases/q1/1-tinygrid.test
+*** PASS: test_cases/q1/2-tinygrid-noisy.test
+*** PASS: test_cases/q1/3-bridge.test
+*** PASS: test_cases/q1/4-discountgrid.test
+
+### Question q1: 6/6 ###
+
+
+Question q2
+===========
+
+*** PASS: test_cases/q2/1-bridge-grid.test
+
+### Question q2: 1/1 ###
+
+
+Question q3
+===========
+
+*** PASS: test_cases/q3/1-question-3.1.test
+*** PASS: test_cases/q3/2-question-3.2.test
+*** PASS: test_cases/q3/3-question-3.3.test
+*** PASS: test_cases/q3/4-question-3.4.test
+*** PASS: test_cases/q3/5-question-3.5.test
+
+### Question q3: 5/5 ###
+
+
+Question q4
+===========
+
+*** PASS: test_cases/q4/1-tinygrid.test
+*** PASS: test_cases/q4/2-tinygrid-noisy.test
+*** PASS: test_cases/q4/3-bridge.test
+*** PASS: test_cases/q4/4-discountgrid.test
+
+### Question q4: 5/5 ###
+
+
+Question q5
+===========
+
+*** FAIL: Exception raised: global name 'legalAction' is not defined
+*** 
+*** Traceback (most recent call last):
+***   File "/home/techknowfile/courses/cse471ta/project3/tmp/grading.py", line 75, in grade
+***     util.TimeoutFunction(getattr(gradingModule, q),300)(self) # Call the question's function
+***   File "/home/techknowfile/courses/cse471ta/project3/tmp/util.py", line 612, in __call__
+***     result = self.function(*args, **keyArgs)
+***   File "autograder.py", line 295, in <lambda>
+***     return lambda grades: question.execute(grades)
+***   File "/home/techknowfile/courses/cse471ta/project3/tmp/testClasses.py", line 57, in execute
+***     if not f(grades):
+***   File "autograder.py", line 290, in <lambda>
+***     return lambda grades: testCase.execute(grades, moduleDict, solutionDict)
+***   File "reinforcementTestClasses.py", line 559, in execute
+***     if self.testEpsilonGreedy(moduleDict):
+***   File "reinforcementTestClasses.py", line 594, in testEpsilonGreedy
+***     if agent.getAction(state) == optimalAction:
+***   File "qlearningAgents.py", line 144, in getAction
+***     action = random.choice(legalAction)
+*** NameError: global name 'legalAction' is not defined
+*** 
+
+### Question q5: 0/3 ###
+
+
+Question q6
+===========
+
+*** PASS: test_cases/q6/grade-agent.test
+
+### Question q6: 1/1 ###
+
+
+Question q7
+===========
+
+*** FAIL: Exception raised: Illegal action None
+*** 
+*** Traceback (most recent call last):
+***   File "/home/techknowfile/courses/cse471ta/project3/tmp/grading.py", line 75, in grade
+***     util.TimeoutFunction(getattr(gradingModule, q),300)(self) # Call the question's function
+***   File "/home/techknowfile/courses/cse471ta/project3/tmp/util.py", line 612, in __call__
+***     result = self.function(*args, **keyArgs)
+***   File "autograder.py", line 295, in <lambda>
+***     return lambda grades: question.execute(grades)
+***   File "/home/techknowfile/courses/cse471ta/project3/tmp/testClasses.py", line 110, in execute
+***     if not f(grades):
+***   File "autograder.py", line 290, in <lambda>
+***     return lambda grades: testCase.execute(grades, moduleDict, solutionDict)
+***   File "reinforcementTestClasses.py", line 659, in execute
+***     games = pacman.runGames(** pacman.readCommand(self.pacmanParams.split(' ')))
+***   File "/home/techknowfile/courses/cse471ta/project3/tmp/pacman.py", line 646, in runGames
+***     game.run()
+***   File "/home/techknowfile/courses/cse471ta/project3/tmp/game.py", line 700, in run
+***     self.state = self.state.generateSuccessor( agentIndex, action )
+***   File "/home/techknowfile/courses/cse471ta/project3/tmp/pacman.py", line 107, in generateSuccessor
+***     PacmanRules.applyAction( state, action )
+***   File "/home/techknowfile/courses/cse471ta/project3/tmp/pacman.py", line 343, in applyAction
+***     raise Exception("Illegal action " + str(action))
+*** Exception: Illegal action None
+*** 
+
+### Question q7: 0/1 ###
+
+
+Question q8
+===========
+
+*** FAIL: Exception raised: global name 'weights' is not defined
+*** 
+*** Traceback (most recent call last):
+***   File "/home/techknowfile/courses/cse471ta/project3/tmp/grading.py", line 75, in grade
+***     util.TimeoutFunction(getattr(gradingModule, q),300)(self) # Call the question's function
+***   File "/home/techknowfile/courses/cse471ta/project3/tmp/util.py", line 612, in __call__
+***     result = self.function(*args, **keyArgs)
+***   File "autograder.py", line 295, in <lambda>
+***     return lambda grades: question.execute(grades)
+***   File "/home/techknowfile/courses/cse471ta/project3/tmp/testClasses.py", line 57, in execute
+***     if not f(grades):
+***   File "autograder.py", line 290, in <lambda>
+***     return lambda grades: testCase.execute(grades, moduleDict, solutionDict)
+***   File "reinforcementTestClasses.py", line 233, in execute
+***     testPass, stdOutString, fileOutString = self.executeNExperiences(grades, moduleDict, solutionDict, n)
+***   File "reinforcementTestClasses.py", line 246, in executeNExperiences
+***     qValuesPretty, weights, actions, lastExperience = self.runAgent(moduleDict, n)
+***   File "reinforcementTestClasses.py", line 302, in runAgent
+***     qValues[action][state] = agent.getQValue(state, action)
+***   File "qlearningAgents.py", line 237, in getQValue
+***     value += weights[feature] * v
+*** NameError: global name 'weights' is not defined
+*** 
+
+### Question q8: 0/3 ###
+
+
+Finished at 15:29:30
+
+Provisional grades
+==================
+Question q1: 6/6
+Question q2: 1/1
+Question q3: 5/5
+Question q4: 5/5
+Question q5: 0/3
+Question q6: 1/1
+Question q7: 0/1
+Question q8: 0/3
+------------------
+Total: 18/25
+
+Your grades are NOT yet registered.  To register your grades, make sure
+to follow your instructor's guidelines to receive credit on your project.
+

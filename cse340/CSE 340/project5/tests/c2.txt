@@ -1,0 +1,13 @@
+a, b, c, z ;
+{
+	a = 1;
+	b = 2;
+	c = 1000;
+	z = 9999;
+	SWITCH b {
+		CASE 1: { print a; }
+		CASE 3: { print b; }
+		DEFAULT: { print c;}
+	}
+	print z;
+}

@@ -1,0 +1,207 @@
+plotUtil.plotRegression: Sorry, could not import matplotlib
+Extracting MNIST_data/train-images-idx3-ubyte.gz
+Extracting MNIST_data/train-labels-idx1-ubyte.gz
+Extracting MNIST_data/t10k-images-idx3-ubyte.gz
+Extracting MNIST_data/t10k-labels-idx1-ubyte.gz
+Starting on 11-27 at 19:20:04
+
+Question q1
+===========
+
+*** FAIL: Terminated with a string exception.
+
+### Question q1: 0/4 ###
+
+
+Question q2
+===========
+
+*** FAIL: test_cases/q2/grade.test
+***     Solution is not correct.
+***     Student solution: None
+*** Tests failed.
+
+### Question q2: 0/1 ###
+
+
+Question q3
+===========
+
+*** FAIL: test_cases/q3/grade.test
+***     Solution is not correct.
+***     Student solution: None
+*** Tests failed.
+
+### Question q3: 0/1 ###
+
+
+Question q4
+===========
+
+*** PASS: test_cases/q4/learning_rate0.1.test (2 of 2 points)
+*** PASS: test_cases/q4/learning_rate1.test (2 of 2 points)
+
+### Question q4: 2/2 ###
+
+
+Question q5
+===========
+
+*** PASS: test_cases/q5/learning_rate0.1-momentum0.0.test (1 of 1 points)
+*** PASS: test_cases/q5/learning_rate0.1-momentum0.0-update_iterations1.test (1 of 1 points)
+*** PASS: test_cases/q5/learning_rate0.1-momentum0.9.test (1 of 1 points)
+*** PASS: test_cases/q5/learning_rate0.1-momentum0.9-update_iterations1.test (1 of 1 points)
+*** PASS: test_cases/q5/learning_rate0.1-momentum1.0.test (1 of 1 points)
+*** PASS: test_cases/q5/learning_rate0.1-momentum1.0-update_iterations1.test (1 of 1 points)
+*** PASS: test_cases/q5/learning_rate1-momentum0.0.test (1 of 1 points)
+*** PASS: test_cases/q5/learning_rate1-momentum0.0-update_iterations1.test (1 of 1 points)
+*** PASS: test_cases/q5/learning_rate1-momentum0.9.test (1 of 1 points)
+*** PASS: test_cases/q5/learning_rate1-momentum0.9-update_iterations1.test (1 of 1 points)
+*** PASS: test_cases/q5/learning_rate1-momentum1.0.test (1 of 1 points)
+*** PASS: test_cases/q5/learning_rate1-momentum1.0-update_iterations1.test (1 of 1 points)
+
+### Question q5: 1/1 ###
+
+
+Question q6a
+============
+
+*** PASS: test_cases/q6a/GD-max_iter1.test (2 of 2 points)
+*** PASS: test_cases/q6a/GD-max_iter10.test (2 of 2 points)
+
+### Question q6a: 2/2 ###
+
+
+Question q6b
+============
+
+*** FAIL: Exception raised: global name 'train_gen' is not defined
+*** 
+*** Traceback (most recent call last):
+***   File "/home/techknowfile/courses/cse471ta/project4/tmp/grading.py", line 78, in grade
+***     util.TimeoutFunction(getattr(gradingModule, q),1200)(self) # Call the question's function
+***   File "/home/techknowfile/courses/cse471ta/project4/tmp/util.py", line 643, in __call__
+***     result = self.function(*args, **keyArgs)
+***   File "autograder.py", line 278, in <lambda>
+***     return lambda grades: question.execute(grades)
+***   File "/home/techknowfile/courses/cse471ta/project4/tmp/testClasses.py", line 57, in execute
+***     if not f(grades):
+***   File "autograder.py", line 273, in <lambda>
+***     return lambda grades: testCase.execute(grades, moduleDict, solutionDict)
+***   File "classificationTestClasses.py", line 249, in execute
+***     init_param_values, model, dataset, losses = self.get_solved_model_and_dataset(moduleDict, init_param_values)
+***   File "classificationTestClasses.py", line 241, in get_solved_model_and_dataset
+***     losses = solver.solve(*(dataset[:4] + [model]))
+***   File "solvers.py", line 294, in solve
+***     input_trained, target_trained = train_gen.next()
+*** NameError: global name 'train_gen' is not defined
+*** 
+
+### Question q6b: 0/1 ###
+
+
+Question q6c
+============
+
+*** PASS: test_cases/q6c/minibatchSGD-max_iter1-shuffle0.test (1 of 1 points)
+*** PASS: test_cases/q6c/minibatchSGD-max_iter1-shuffle1.test (1 of 1 points)
+*** PASS: test_cases/q6c/minibatchSGD-max_iter10-shuffle0.test (1 of 1 points)
+*** PASS: test_cases/q6c/minibatchSGD-max_iter10-shuffle1.test (1 of 1 points)
+
+### Question q6c: 1/1 ###
+
+
+Question q7
+===========
+
+*** PASS: test_cases/q7/grade.test
+
+### Question q7: 1/1 ###
+
+
+Question q8
+===========
+
+*** FAIL: Exception raised: local variable 'best_Accuracy' referenced before assignment
+*** 
+*** Traceback (most recent call last):
+***   File "/home/techknowfile/courses/cse471ta/project4/tmp/grading.py", line 78, in grade
+***     util.TimeoutFunction(getattr(gradingModule, q),1200)(self) # Call the question's function
+***   File "/home/techknowfile/courses/cse471ta/project4/tmp/util.py", line 643, in __call__
+***     result = self.function(*args, **keyArgs)
+***   File "autograder.py", line 278, in <lambda>
+***     return lambda grades: question.execute(grades)
+***   File "/home/techknowfile/courses/cse471ta/project4/tmp/testClasses.py", line 57, in execute
+***     if not f(grades):
+***   File "autograder.py", line 273, in <lambda>
+***     return lambda grades: testCase.execute(grades, moduleDict, solutionDict)
+***   File "classificationTestClasses.py", line 393, in execute
+***     param_values = self.hyperparam_exp_get_model(init_param_values)
+***   File "classificationTestClasses.py", line 386, in hyperparam_exp_get_model
+***     init_param_values=init_param_values)
+***   File "search_hyperparams.py", line 68, in search_hyperparams
+***     if best_Accuracy < curr_accuracy:
+*** UnboundLocalError: local variable 'best_Accuracy' referenced before assignment
+*** 
+
+### Question q8: 0/2 ###
+
+
+Question q9
+===========
+
+*** FAIL: Terminated with a string exception.
+
+### Question q9: 0/5 ###
+
+
+Question q10
+============
+
+*** FAIL: Exception raised: __init__() takes at least 4 arguments (4 given)
+*** 
+*** Traceback (most recent call last):
+***   File "/home/techknowfile/courses/cse471ta/project4/tmp/grading.py", line 78, in grade
+***     util.TimeoutFunction(getattr(gradingModule, q),1200)(self) # Call the question's function
+***   File "/home/techknowfile/courses/cse471ta/project4/tmp/util.py", line 643, in __call__
+***     result = self.function(*args, **keyArgs)
+***   File "autograder.py", line 278, in <lambda>
+***     return lambda grades: question.execute(grades)
+***   File "/home/techknowfile/courses/cse471ta/project4/tmp/testClasses.py", line 57, in execute
+***     if not f(grades):
+***   File "autograder.py", line 273, in <lambda>
+***     return lambda grades: testCase.execute(grades, moduleDict, solutionDict)
+***   File "classificationTestClasses.py", line 332, in execute
+***     accuracy = 100.0 * self.grade_classifier(moduleDict, solutionDict)
+***   File "classificationTestClasses.py", line 321, in grade_classifier
+***     init_param_values, model, dataset, losses = self.get_solved_model_and_dataset(moduleDict, init_param_values)
+***   File "classificationTestClasses.py", line 240, in get_solved_model_and_dataset
+***     solver = solver_class(**self.solver_kwargs)
+*** TypeError: __init__() takes at least 4 arguments (4 given)
+*** 
+
+### Question q10: 0/4 ###
+
+
+Finished at 19:20:15
+
+Provisional grades
+==================
+Question q1: 0/4
+Question q2: 0/1
+Question q3: 0/1
+Question q4: 2/2
+Question q5: 1/1
+Question q6a: 2/2
+Question q6b: 0/1
+Question q6c: 1/1
+Question q7: 1/1
+Question q8: 0/2
+Question q9: 0/5
+Question q10: 0/4
+------------------
+Total: 7/25
+
+Your grades are NOT yet registered.  To register your grades, make sure
+to follow your instructor's guidelines to receive credit on your project.
+
